@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/home/ckibuchi/Documents/code/apps/keapp/app/build/intermediates/exploded-aar/com.astuetz/pagerslidingtabstrip/1.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="7912610ed96381c25c36d986eba422731b9641b6">
+        <dex dex="/home/ckibuchi/Documents/code/apps/keapp/app/build/intermediates/pre-dexed/debug/classes-2cb7de9740f3854638f67ac9c34dce7c0dd5650c.jar" />
+    </item>
+    <item
+        jar="/home/ckibuchi/Documents/code/apps/keapp/app/build/intermediates/exploded-aar/com.rockerhieu.emojicon/library/1.1-SNAPSHOT/jars/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="8e27535cdfade602600af3228982208bed98d6b6">
+        <dex dex="/home/ckibuchi/Documents/code/apps/keapp/app/build/intermediates/pre-dexed/debug/classes-e628dc74bfa508e15533f8ac913cc8ce15e12e0e.jar" />
+    </item>
+    <item
+        jar="/home/ckibuchi/Documents/code/apps/keapp/app/build/intermediates/exploded-aar/de.hdodenhof/circleimageview/1.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4b868b833b0887aa48c4e581558eef4f1196f6a2">
+        <dex dex="/home/ckibuchi/Documents/code/apps/keapp/app/build/intermediates/pre-dexed/debug/classes-27af470cc272225639f4ebd1836fc3bc35b00072.jar" />
+    </item>
+    <item
+        jar="/home/ckibuchi/Documents/code/apps/keapp/app/build/intermediates/exploded-aar/org.lucasr.twowayview/twowayview/0.1.4/jars/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="1a2a997b75e4c94dac7051557be6b95a06566291">
+        <dex dex="/home/ckibuchi/Documents/code/apps/keapp/app/build/intermediates/pre-dexed/debug/classes-6c59054b6a7cc7be8bc843e696fc9417c0490c4f.jar" />
+    </item>
+    <item
+        jar="/home/ckibuchi/.gradle/caches/modules-2/files-2.1/org.igniterealtime.smack/smack-core/4.1.0/ad5c17dc5fe7f383118c5a3f1818b8789b697930/smack-core-4.1.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="ad5c17dc5fe7f383118c5a3f1818b8789b697930">
+        <dex dex="/home/ckibuchi/Documents/code/apps/keapp/app/build/intermediates/pre-dexed/debug/smack-core-4.1.0-e80bd5e505565663359fc0cf7c7452ba3caf6cf5.jar" />
+    </item>
+    <item
+        jar="/home/ckibuchi/.gradle/caches/modules-2/files-2.1/org.igniterealtime.smack/smack-android/4.1.0/3da1ad907fe8eb0db80471b8837d3e51690fe13c/smack-android-4.1.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="3da1ad907fe8eb0db80471b8837d3e51690fe13c">
+        <dex dex="/home/ckibuchi/Documents/code/apps/keapp/app/build/intermediates/pre-dexed/debug/smack-android-4.1.0-c24307d4f52f259a6509492c97acf00c9795c343.jar" />
+    </item>
+    <item
+        jar="/home/ckibuchi/.gradle/caches/modules-2/files-2.1/org.igniterealtime.smack/smack-experimental/4.1.0/6081c1d9965dbbc46f89bda6f58fef9c61cbfe54/smack-experimental-4.1.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="6081c1d9965dbbc46f89bda6f58fef9c61cbfe54">
+        <dex dex="/home/ckibuchi/Documents/code/apps/keapp/app/build/intermediates/pre-dexed/debug/smack-experimental-4.1.0-42d12af8f03f2c30719d95c1fae54fd7997e7ebb.jar" />
+    </item>
+    <item
+        jar="/home/ckibuchi/Documents/code/apps/keapp/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="3f151e49c316a5ab2c065969a3b3b55ef9b393fc">
+        <dex dex="/home/ckibuchi/Documents/code/apps/keapp/app/build/intermediates/pre-dexed/debug/classes-120d054e9dcf4f0384e9df4904a910f71d30dff9.jar" />
+    </item>
+    <item
+        jar="/home/ckibuchi/.gradle/caches/modules-2/files-2.1/org.igniterealtime.smack/smack-tcp/4.1.0/b5043991d7ed52da15089fcfcbca1dd862d1af42/smack-tcp-4.1.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="b5043991d7ed52da15089fcfcbca1dd862d1af42">
+        <dex dex="/home/ckibuchi/Documents/code/apps/keapp/app/build/intermediates/pre-dexed/debug/smack-tcp-4.1.0-f08715c41ce60619d8565e5dc034da77fb021a49.jar" />
+    </item>
+    <item
+        jar="/home/ckibuchi/.gradle/caches/modules-2/files-2.1/org.jxmpp/jxmpp-util-cache/0.4.2-beta1/43e2a81f52600639daeb02ede60cc498a13614a5/jxmpp-util-cache-0.4.2-beta1.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="43e2a81f52600639daeb02ede60cc498a13614a5">
+        <dex dex="/home/ckibuchi/Documents/code/apps/keapp/app/build/intermediates/pre-dexed/debug/jxmpp-util-cache-0.4.2-beta1-4616bf441c87cfde7b3c716fc1ac810f248cb688.jar" />
+    </item>
+    <item
+        jar="/home/ckibuchi/.gradle/caches/modules-2/files-2.1/org.igniterealtime.smack/smack-resolver-minidns/4.1.0/5b8783270e55f49937492b23df34993c4e51c8d7/smack-resolver-minidns-4.1.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="5b8783270e55f49937492b23df34993c4e51c8d7">
+        <dex dex="/home/ckibuchi/Documents/code/apps/keapp/app/build/intermediates/pre-dexed/debug/smack-resolver-minidns-4.1.0-12b9f0b17c613b910b80ce078d92f9b620ad9c3d.jar" />
+    </item>
+    <item
+        jar="/home/ckibuchi/.gradle/caches/modules-2/files-2.1/de.measite.minidns/minidns/0.1.7/993582d1455b93a5723d2af4b39d8679735b3550/minidns-0.1.7.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="993582d1455b93a5723d2af4b39d8679735b3550">
+        <dex dex="/home/ckibuchi/Documents/code/apps/keapp/app/build/intermediates/pre-dexed/debug/minidns-0.1.7-bf3a9a0e6af171abbf7b51c4e128f338e0717cf0.jar" />
+    </item>
+    <item
+        jar="/home/ckibuchi/.gradle/caches/modules-2/files-2.1/org.igniterealtime.smack/smack-sasl-provided/4.1.0/74422a92b7bba8eb633ceecdb017530b67451731/smack-sasl-provided-4.1.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="74422a92b7bba8eb633ceecdb017530b67451731">
+        <dex dex="/home/ckibuchi/Documents/code/apps/keapp/app/build/intermediates/pre-dexed/debug/smack-sasl-provided-4.1.0-01175bb6f59f213450e4079b7043d8e6d0048597.jar" />
+    </item>
+    <item
+        jar="/home/ckibuchi/.gradle/caches/modules-2/files-2.1/org.igniterealtime.smack/smack-android-extensions/4.1.0/355b8e606f77ae354e86a84755d2dab9f7536121/smack-android-extensions-4.1.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="355b8e606f77ae354e86a84755d2dab9f7536121">
+        <dex dex="/home/ckibuchi/Documents/code/apps/keapp/app/build/intermediates/pre-dexed/debug/smack-android-extensions-4.1.0-fbe7f359c52c05369ede992e40e721f52e2a4012.jar" />
+    </item>
+    <item
+        jar="/home/ckibuchi/.gradle/caches/modules-2/files-2.1/org.igniterealtime.smack/smack-extensions/4.1.0/b0968f9b209feb2f51d1a1e72238989271750625/smack-extensions-4.1.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="b0968f9b209feb2f51d1a1e72238989271750625">
+        <dex dex="/home/ckibuchi/Documents/code/apps/keapp/app/build/intermediates/pre-dexed/debug/smack-extensions-4.1.0-a0b7fdc9b545cac758b4cec66cd84289d984b676.jar" />
+    </item>
+    <item
+        jar="/home/ckibuchi/Documents/code/apps/keapp/app/libs/gson-2.2.2.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="53bfcd3c8e310d1493b2691484525ed90b04e236">
+        <dex dex="/home/ckibuchi/Documents/code/apps/keapp/app/build/intermediates/pre-dexed/debug/gson-2.2.2-6f6e568ac8a51b5cd9889161773f7cdc770a1272.jar" />
+    </item>
+    <item
+        jar="/home/ckibuchi/Downloads/android-sdk-linux/extras/android/m2repository/com/android/support/support-annotations/23.1.0/support-annotations-23.1.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="92e3fc113ec3ee36b64603a38857b95700025633">
+        <dex dex="/home/ckibuchi/Documents/code/apps/keapp/app/build/intermediates/pre-dexed/debug/support-annotations-23.1.0-35d0ce565f536877ce70db3de7285566b8b15741.jar" />
+    </item>
+    <item
+        jar="/home/ckibuchi/Documents/code/apps/keapp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="d84409890828e07d344a3b9b1da545dba9897b51">
+        <dex dex="/home/ckibuchi/Documents/code/apps/keapp/app/build/intermediates/pre-dexed/debug/classes-be506f83bce7a5094ffc46e9608e853d9ade9434.jar" />
+    </item>
+    <item
+        jar="/home/ckibuchi/Documents/code/apps/keapp/app/libs/android-async-http-1.4.8.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="77bbfe240e437ecb396d982afa0d3bd4f9090ba7">
+        <dex dex="/home/ckibuchi/Documents/code/apps/keapp/app/build/intermediates/pre-dexed/debug/android-async-http-1.4.8-699aa0a29e4766052b89b166f6a0adf5e7f42ad5.jar" />
+    </item>
+    <item
+        jar="/home/ckibuchi/Documents/code/apps/keapp/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/jars/libs/internal_impl-23.1.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="8716243bf04bae8d6c9ca94d27b9a9be7236f0a3">
+        <dex dex="/home/ckibuchi/Documents/code/apps/keapp/app/build/intermediates/pre-dexed/debug/internal_impl-23.1.0-3511d3afd71808dfb3c640c9abab8b15f3d72836.jar" />
+    </item>
+    <item
+        jar="/home/ckibuchi/.gradle/caches/modules-2/files-2.1/org.jxmpp/jxmpp-core/0.4.2-beta1/14ade1a89b0f6db4fa481f9f8a721cdec69374de/jxmpp-core-0.4.2-beta1.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="14ade1a89b0f6db4fa481f9f8a721cdec69374de">
+        <dex dex="/home/ckibuchi/Documents/code/apps/keapp/app/build/intermediates/pre-dexed/debug/jxmpp-core-0.4.2-beta1-4cdcef4f7cd83291ee9054cb07716941279306d9.jar" />
+    </item>
+    <item
+        jar="/home/ckibuchi/Documents/code/apps/keapp/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="ddde541c289c8b816a8f8fd6c325d80788c522a6">
+        <dex dex="/home/ckibuchi/Documents/code/apps/keapp/app/build/intermediates/pre-dexed/debug/classes-b972a91ca464bef8f5cef3d84770e7bda0c6fc43.jar" />
+    </item>
+    <item
+        jar="/home/ckibuchi/.gradle/caches/modules-2/files-2.1/org.igniterealtime.smack/smack-im/4.1.0/4b6d736ad02f64ba54f4a5712a4a453a2c3848b1/smack-im-4.1.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4b6d736ad02f64ba54f4a5712a4a453a2c3848b1">
+        <dex dex="/home/ckibuchi/Documents/code/apps/keapp/app/build/intermediates/pre-dexed/debug/smack-im-4.1.0-0d6ee4173525c963d5820ea3a2119b3f494be38d.jar" />
+    </item>
+    <item
+        jar="/home/ckibuchi/Documents/code/apps/keapp/app/libs/universal-image-loader-1.9.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="a85588bec3e2c4584d593d3f15df1677321bca72">
+        <dex dex="/home/ckibuchi/Documents/code/apps/keapp/app/build/intermediates/pre-dexed/debug/universal-image-loader-1.9.3-1eb16a7dd35a3e98437f1ea4bdd9880bb88111dc.jar" />
+    </item>
+
+</items>

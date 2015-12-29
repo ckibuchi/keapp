@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".KEApp">
+
+    <item android:id="@+id/image_view_change_menu"
+        android:title="@string/action_search"
+        android:icon="@drawable/ic_action_edit_clear"
+        app:showAsAction="always"
+        />
+
+
+    <item android:id="@+id/image_view_share_menu"
+        android:title="@string/action_search"
+        android:icon="@drawable/ic_action_share_clear"
+        app:showAsAction="always"
+        />
+</menu>
+

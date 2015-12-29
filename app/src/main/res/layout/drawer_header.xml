@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="148dp"
+    android:layout_marginBottom="5dp"
+    android:background="@drawable/drawer_head_background_gray"
+    android:theme="@style/KeappKlearPage"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:weightSum="1">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="@android:color/transparent"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:id="@+id/theusername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:textColor="#000000"
+            android:text="### ####"
+            android:textSize="14sp"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+
+            />
+
+        <TextView
+            android:id="@+id/theuserstatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000014"
+            android:layout_marginTop="5dp"
+            android:text="Well, nothing beats trying always give it a chance."
+            android:textSize="14sp"
+            android:textStyle="normal"
+            android:layout_gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:background="@android:color/transparent"
+
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@android:color/transparent"
+        android:gravity="center|center_vertical">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/default_profile_pic"
+            android:layout_gravity="center"
+            android:background="@android:color/transparent"
+            android:id="@+id/circleView"
+
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="#c3c3c3"></LinearLayout>
+</RelativeLayout>

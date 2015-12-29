@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">KEApp</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string-array name="drawer_titles">
+        <item>My Pages</item>
+        <item>Groups</item>
+        <item>Broadcasts</item>
+        <item>Profile</item>
+        <item>Invite Friends</item>
+        <item>Settings</item>
+        <item>Logout</item>
+    </string-array>
+
+    <string name="drawer_open">Open Drawer</string>
+    <string name="drawer_close">Close Drawer</string>
+    <string name="title_contacts">Contacts</string>
+    <string name="title_messages">Messages</string>
+    <string name="title_pages">Pages</string>
+    <string name="title_page_detail">Pages Details</string>
+    <string name="title_create_page">New Page</string>
+    <string name="chat_page_detail">KEApp</string>
+    <string name="broadcast_header">New Broadcast</string>
+    <string name="action_chat">Chat</string>
+    <string name="action_search">Search</string>
+    <string name="group_header">New Group</string>'
+    <string name="status_header">Your Status</string>
+    <string name="contact_search_title">Select Contact</string>
+    <string name="add_contact_search_title">Select Contact</string>
+    <string name="page_search_title">Select Page</string>
+    <string name="authenticator_account_type">FULL ACCESS</string>
+    <string name="authenticator_account_label">Keapp</string>
+    <string name="title_login_page">Sign in</string>
+    <string name="title_signup_page">Sign up</string>
+    <string name="title_forgot_password">Password Reset</string>
+    <string name="title_finish_signup">Signup Success</string>
+    <string name="title_login_failed">Login Failed</string>
+</resources>

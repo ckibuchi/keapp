@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This is the fragment  to be displayed for a section associated with a tab -->
+<LinearLayout android:id="@+id/contact_list_layout"
+    android:layout_height="fill_parent"
+    android:layout_width="fill_parent"
+    android:background="@android:color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ListView android:id="@+id/contact_list_view"
+        android:layout_height="fill_parent"
+        android:background="@android:color/transparent"
+        android:dividerHeight="1dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="1dp"
+        android:layout_width="fill_parent"/>
+
+</LinearLayout>

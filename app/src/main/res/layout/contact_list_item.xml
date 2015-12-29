@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:fillViewport="true"
+    android:layout_height="wrap_content"
+    android:background="@drawable/page_list_border"
+    android:padding="0dip">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/contact_profile_icon"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginRight="5dip"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/default_profile_pic" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:fillViewport="false"
+        android:scaleType="fitCenter"
+        android:background="@android:color/transparent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:background="@android:color/transparent"
+            android:fillViewport="true"
+            android:orientation="vertical"
+            android:layout_marginTop="5dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/contact_profile_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="Reuben Wafula"
+                android:textColor="#606366"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:background="@android:color/transparent"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="5dp"
+
+                />
+
+            <TextView
+                android:id="@+id/contact_phone_number"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="0726986944"
+                android:textColor="#b3b3b3"
+                android:textStyle="bold"
+                android:textSize="14dp"
+                android:background="@android:color/transparent"
+                android:layout_marginLeft="5dp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:fillViewport="true"
+            android:background="@android:color/transparent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginLeft="5dp"
+                android:id="@+id/status_message_text"
+                android:text="Testing profile ... "
+                android:textColor="#656565"
+                android:textSize="16dp"
+                android:background="@android:color/transparent"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/invite_account_layout"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="5dp"
+        android:visibility="invisible"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:clickable="false"
+        android:layout_height="wrap_content">
+
+
+        <TextView android:id="@+id/invite_account"
+            android:layout_marginTop="0dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:text="Invite"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:clickable="false"
+            style="@style/btnStyleBlackCustom"
+            android:layout_marginRight="5dp"
+            android:padding="5dp"/>
+
+    </LinearLayout>
+</LinearLayout>

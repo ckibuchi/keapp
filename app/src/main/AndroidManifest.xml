@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.rube.tt.keapp" >
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS"/>
+    <uses-permission android:name="android.permission.WRITE_SMS"/>
+
+    <!-- Include next permission if you want to allow UIL to cache images on SD card -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!--- record audio alongside video -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <!-- Include android account authenticator service permission -->
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+
+    <!-- include permissions for chat part -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <!-- Access to network and network info -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/KeappActionBar"
+        tools:replace="android:icon,android:theme"
+        >
+        <activity
+            android:name=".SplashScreen"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".KEApp" android:label="@string/app_name"  android:uiOptions="splitActionBarWhenNarrow">
+
+        </activity>
+        <activity android:name=".Login" android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"></action>
+                <category android:name="android.intent.category.DEFAULT"></category>
+                <category android:name="android.intent.category.BROWSABLE"></category>
+
+                <data android:host="www.keapp.com" android:pathPrefix="/launch/"
+                    android:path="/launch/.*" android:scheme="http"></data>
+                <data android:host="keapp.com" android:pathPrefix="/launch/"
+                    android:path="/launch/.*" android:scheme="http"></data>
+            </intent-filter>
+        </activity>
+        <activity android:name=".Signup" android:label="@string/title_signup_page" />
+        <activity android:name=".FinishSignup" android:label="@string/title_finish_signup" />
+        <activity android:name=".PageDetail" android:label="@string/title_page_detail" />
+        <activity android:name=".ChatView" android:label="@string/chat_page_detail" />
+        <activity android:name=".BroadCast" android:label="@string/broadcast_header" />
+        <activity android:name=".Group" android:label="@string/group_header" />
+        <activity android:name=".UserStatus" android:label="@string/status_header" />
+        <activity android:name=".ForgotPassword" android:label="@string/title_forgot_password" />
+        <activity android:name=".LoginFailed" android:label="@string/title_login_failed" />
+        <activity android:name=".BigImageViewActivity" android:label="Image" />
+        <activity android:name=".Page" android:label="Create New Page" />
+        <activity android:name=".Story" android:label="Create New Story" />
+
+        <service
+            android:name=".services.SyncAdapterService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter" />
+            </intent-filter>
+            <meta-data
+                android:name="android.content.SyncAdapter"
+                android:resource="@xml/sync_adapter" />
+        </service>
+
+        <service
+            android:name=".services.AuthenticatorService"
+            android:enabled="true" >
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator" />
+            </intent-filter>
+            <meta-data
+                android:name="android.accounts.AccountAuthenticator"
+                android:resource="@xml/authenticator" />
+        </service>
+        <service android:name=".services.XMPPService"
+            android:enabled="true" >
+            <intent-filter>
+                <action android:name="com.rube.tt.keapp.action.CONNECT" />
+                <action android:name="com.rube.tt.keapp.action.DISCONNECT" />
+                <action android:name="com.rube.tt.keapp.action.TOGGLE" />
+                <action android:name="com.rube.tt.keapp.action.SEND" />
+                <action android:name="com.rube.tt.keapp.action.NETWORK_STATUS_CHANGED" />
+                <action android:name="com.rube.tt.keapp.action.COMMAND" />
+            </intent-filter>
+        </service>
+        <receiver android:name=".receivers.NetworkChangeReceiver" >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".receivers.BootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <category android:name="android.intent.category.HOME" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

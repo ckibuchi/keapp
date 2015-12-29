@@ -1,0 +1,96 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="KeappActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:indeterminateProgressStyle">@style/IndeterminateProgress</item>
+        <item name="android:background">#000000</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="android:textColorSecondary">@android:color/white</item>
+        <item name="actionMenuTextColor">@android:color/white</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+    </style>
+
+    <style name="LightPopupTheme" parent="ThemeOverlay.AppCompat.Light">
+        <!-- <item name="android:colorBackground">@android:color/white</item>
+        <item name="android:background">@android:color/white</item>
+        <item name="android:popupBackground">@android:color/white</item>
+        <item name="android:textColor">@android:color/black</item> -->
+
+        <!-- Change Overflow Menu ListView Item Height & Property -->
+        <item name="android:listPreferredItemHeightSmall">45dp</item>
+        <item name="android:listPreferredItemPaddingLeft">5dp</item>
+        <item name="android:listPreferredItemPaddingRight">5dp</item>
+
+    </style>
+
+    <style name="KeappTabBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:indeterminateProgressStyle">@style/IndeterminateProgress</item>
+        <item name="android:background">#e3e3e3</item>
+        <item name="android:textColor">#000000</item>
+        <item name="pstsShouldExpand">true</item>
+        <item name="pstsTextAllCaps">false</item>
+
+    </style>
+    <style name="KeappKlearPage" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:indeterminateProgressStyle">@style/IndeterminateProgress</item>
+        <item name="android:background">#F8F8F8</item>
+        <item name="android:textColor">#000014</item>
+    </style>
+
+    <style name="DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">true</item>
+        <item name="color">@android:color/white</item>
+    </style>
+
+    <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="btnStyleBlackCustom" parent="@android:style/Widget.Button">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:gravity">center</item>
+        <item name="android:shadowColor">#000000</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">0.6</item>
+        <item name="android:background">@drawable/custom_black_btn</item>
+        <item name="android:padding">10dip</item>
+
+    </style>
+
+    <style name="normalTextViewStyle" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/default_text_color</item>
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:padding">10dip</item>
+        <item name="android:minHeight">35dip</item>
+    </style>
+
+    <!-- Change Overflow Menu ListView Divider Property -->
+    <style name="PopupMenuListView" parent="@android:style/Widget.Holo.ListView.DropDown">
+        <item name="android:divider">#FF0000</item>
+        <item name="android:dividerHeight">2dp</item>
+    </style>
+
+    <!-- Change Overflow Menu ListView Text Size and Text Size -->
+    <style name="PopupMenuTextView" parent="@style/android:Theme.Holo.Light">
+        <item name="android:textColor">#00FF00</item>
+        <item name="android:textSize">28dp</item>
+    </style>
+
+    <!-- Change Overflow Menu Background -->
+    <style name="PopupMenu" parent="android:Widget.Holo.Light.ListPopupWindow">
+        <item name="android:popupBackground">#888888</item>
+    </style>
+
+
+    <style name="IndeterminateProgress" parent="@android:style/Widget.ProgressBar">
+        <item name="android:background">@android:color/white</item>
+    </style>
+
+
+</resources>

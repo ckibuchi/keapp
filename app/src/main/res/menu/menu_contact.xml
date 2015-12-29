@@ -1,0 +1,31 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".KEApp">
+
+    <item android:id="@+id/toolbar_icon_search_contact"
+        android:title="@string/action_search"
+        android:icon="@drawable/ic_action_search"
+        app:showAsAction="always"
+        app:actionViewClass="android.support.v7.widget.SearchView"/>
+
+
+    <item android:id="@+id/toolbar_icon_contact"
+        android:title="@string/action_search"
+        android:icon="@drawable/ic_action_contact"
+        app:showAsAction="always" />
+
+    <item android:id="@+id/toolbar_icon_contact_refresh"
+        android:title="Refresh"
+        app:showAsAction="collapseActionView" />
+
+    <item android:id="@+id/toolbar_icon_contact_status"
+        android:title="Status"
+        app:showAsAction="collapseActionView" />
+
+    <item android:id="@+id/toolbar_icon_contact_settings"
+        android:title="@string/action_settings"
+        app:showAsAction="collapseActionView" />
+
+
+</menu>
+

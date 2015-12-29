@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="toolbarbg">#000014</color>
+    <color name="default_text_color1" >#19192B</color>
+    <color name="default_text_color" >#474747</color>
+    <color name="default_text_link" >#66A3E0</color>
+</resources>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginRight="20dp"
+    android:layout_marginLeft="20dp"
+    android:padding="10dp"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:id="@+id/toast_layout_root"
+    android:orientation="horizontal"
+    android:layout_gravity="center_vertical"
+
+    android:background="@drawable/border_rounded_dark"
+    >
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_height="32dp"
+        android:layout_width="32dp"
+        android:layout_marginLeft="5dp"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/keapp_logo_v"
+        android:background="@android:color/transparent"
+        android:id="@+id/imageview"
+    />
+
+    <TextView
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center_vertical"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/toast_view_text"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:background="@android:color/transparent"
+        android:text="My message is very long and we want to wrap it over"
+        android:textColor="@android:color/white">
+    </TextView>
+
+</LinearLayout>

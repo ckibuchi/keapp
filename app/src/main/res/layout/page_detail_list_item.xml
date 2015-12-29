@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:fillViewport="true"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/page_list_border"
+    android:padding="0dip">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@android:color/transparent"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/page_detail_profile_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="8dp"
+            android:layout_marginRight="5dip"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/image_curved_border"
+            android:src="@drawable/default_profile_pic" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:fillViewport="true"
+            android:layout_marginTop="5dp"
+            android:background="@android:color/transparent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/page_detail_profile_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="Reuben Paul"
+                android:textColor="#606366"
+                android:textStyle="normal"
+                android:textSize="16dp"
+                android:background="@android:color/transparent"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="5dp"
+
+                />
+            <TextView
+                android:id="@+id/page_detail_story_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="Story title"
+                android:textColor="#606366"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:background="@android:color/transparent"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="5dp"
+
+                />
+            <TextView
+                android:id="@+id/page_detail_text_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="12/12/2015"
+                android:textColor="#b3b3b3"
+                android:textStyle="bold"
+                android:textSize="12dp"
+                android:gravity="left"
+                android:background="@android:color/transparent"
+                android:layout_marginLeft="5dp"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:fillViewport="true"
+        android:background="@android:color/transparent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/page_detail_text"
+            android:text="This is supposed to be a huge story, with images ans all everythig. Infact you can add blabl And also add othe effects all over the place"
+            android:textColor="#474747"
+            android:textSize="16dp"
+            android:background="@android:color/transparent"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:fillViewport="true"
+        android:background="@android:color/transparent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/page_detail_comments"
+            android:text="Comments(200)"
+            android:textColor="#A8AEB2"
+            android:textSize="14dp"
+            android:background="@android:color/transparent"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/page_detail_likes"
+            android:text="Likes(200)"
+            android:textColor="#A8AEB2"
+            android:textSize="14dp"
+            android:background="@android:color/transparent"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:background="#eeeeee"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_height="1dp"></LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal"
+        android:layout_weight="2"
+        android:background="@android:color/transparent" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@android:color/transparent"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/ic_action_like"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:layout_marginTop="2dp"
+                android:textSize="14dp"
+                android:text="Like"
+                android:textColor="#000014"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="1dp"
+            android:background="#eeeeee"
+            android:layout_height="fill_parent"></LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+
+            android:background="@android:color/transparent"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_marginTop="2dp"
+                android:layout_width="25dp"
+                android:background="@android:color/transparent"
+                android:layout_height="25dp"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/ic_action_comment"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:layout_marginTop="0dp"
+                android:textSize="14dp"
+                android:text="Comment"
+                android:textColor="#000014"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="1dp"
+            android:background="#eeeeee"
+            android:layout_height="fill_parent"></LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+
+            android:background="@android:color/transparent"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_marginTop="2dp"
+                android:layout_width="25dp"
+                android:background="@android:color/transparent"
+                android:layout_height="25dp"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/ic_action_share"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:layout_marginTop="0dp"
+                android:textSize="14dp"
+                android:text="Share"
+                android:textColor="#000014"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
