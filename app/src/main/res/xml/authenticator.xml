@@ -3,5 +3,5 @@
     android:accountPreferences="@xml/authenticator_preferences"
     android:accountType="keapp.com"
     android:label="@string/authenticator_account_label"
-    android:icon="@drawable/ic_launcher"
-    android:smallIcon="@drawable/ic_launcher" />
+    android:icon="@drawable/gcm_cloud"
+    android:smallIcon="@drawable/gcm_cloud" />

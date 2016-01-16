@@ -1,12 +1,8 @@
 package com.rube.tt.keapp.adapters;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
-import android.transition.Visibility;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +12,9 @@ import android.widget.TextView;
 
 import com.rube.tt.keapp.R;
 import com.rube.tt.keapp.models.ChatMessage;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by rube on 4/15/15.
@@ -102,12 +101,12 @@ public class ChatMessageListAdapter extends BaseAdapter {
             ImageView sendIconImage = (ImageView)convertView.findViewById(R.id.sent_success_image_icon);
 
             ImageView imgMsgFrom = (ImageView) convertView.findViewById(R.id.imageMsgFrom);
-            TextView txtMsg = (TextView) convertView.findViewById(R.id.txtMsg);
-            TextView chatDate = (TextView) convertView.findViewById(R.id.chat_date);
+            TextView txtMsg = (TextView) convertView.findViewById(R.id.message_text);
+            TextView chatDate = (TextView) convertView.findViewById(R.id.time_text);
 
             txtMsg.setText(m.getMessage());
             //imgMsgFrom.setImageResource(m.getProfileIcon());
-            chatDate.setText(m.getChatDate());
+           // chatDate.setText(m.getMessageTime());
 
             if(m.isDelivered()){
                 sendIconImage.setImageDrawable(this.context.getResources().getDrawable(R.drawable.ic_action_green));

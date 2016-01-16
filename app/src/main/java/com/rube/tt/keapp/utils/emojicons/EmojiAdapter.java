@@ -16,11 +16,6 @@
 
 package com.rube.tt.keapp.utils.emojicons;
 
-import com.rube.tt.keapp.utils.emojicons.EmojiconGridView.OnEmojiconClickedListener;
-import com.rube.tt.keapp.utils.emojicons.emoji.Emojicon;
-
-import java.util.List;
-
 import android.content.Context;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -29,6 +24,10 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import com.rube.tt.keapp.R;
+import com.rube.tt.keapp.utils.emojicons.EmojiconGridView.OnEmojiconClickedListener;
+import com.rube.tt.keapp.utils.emojicons.emoji.Emojicon;
+
+import java.util.List;
 
 /**
  * @author Ankush Sachdeva (sankush@yahoo.co.in)
@@ -42,11 +41,11 @@ class EmojiAdapter extends ArrayAdapter<Emojicon> {
     public EmojiAdapter(Context context, Emojicon[] data) {
         super(context, R.layout.emojicon_item, data);
     }
-    
+
     public void setEmojiClickListener(OnEmojiconClickedListener listener){
     	this.emojiClickListener = listener;
     }
-    
+
     @Override
     public View getView(final int position, View convertView, ViewGroup parent) {
         View v = convertView;

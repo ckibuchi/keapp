@@ -39,7 +39,9 @@ public final class DB {
         static final String CREATE_STATEMENT =
                 "CREATE TABLE " + Chat.TABLE + "(" + " " + Chat._ID + " " + Chat._ID_TYPE +
                         "," + " " + Chat.FROM         + " " + Chat.FROM_TYPE +
+                        "," + " " + Chat.USER_TYPE         + " " + Chat.USER_TYPE_FORMAT +
                         "," + " " + Chat.SERVER_ID         + " " + Chat.SERVER_ID_TYPE +
+                        "," + " " + Chat.messageID         + " " + Chat.messageID_TYPE +
                         "," + " " + Chat.TO           + " " + Chat.TO_TYPE +
                         "," + " " + Chat.MESSAGE      + " " + Chat.MESSAGE_TYPE +
                         "," + " " + Chat.MEDIA        + " " + Chat.MEDIA_TYPE +
@@ -60,20 +62,25 @@ public final class DB {
     {
         public static final String DATE_CREATED  = "date_created";
         public static final String SERVER_ID     = "server_id";
+        public static final String USER_TYPE          = "user_type";
         public static final String FROM          = "from_id";
-        public static final String TO            = "to_id";
+         public static final String TO            = "to_id";
         public static final String MESSAGE       = "message";
         public static final String STATUS        = "status_id";
         public static final String MEDIA         = "media_id";
+        public static final String messageID         = "messageid";
 
         static final String DATE_CREATED_TYPE   = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP";
-        static final String FROM_TYPE           = "INTEGER NOT NULL";
-        static final String TO_TYPE             = "INTEGER NOT NULL";
+        static final String FROM_TYPE           = "TEXT NOT NULL";
+        static final String TO_TYPE             = "TEXT NOT NULL";
+        static final String USER_TYPE_FORMAT            = "TEXT NOT NULL";
         static final String MESSAGE_TYPE        = "TEXT NULL";
-        static final String STATUS_TYPE         = "INTEGER NOT NULL";
+        static final String STATUS_TYPE         = "TEXT NOT NULL";
         static final String MEDIA_TYPE          = "INTEGER  NULL";
         static final String _ID_TYPE            = "INTEGER PRIMARY KEY AUTOINCREMENT";
-        static  final  String SERVER_ID_TYPE     = "INTEGER NOT NULL DEFAULT 0";
+        static  final  String SERVER_ID_TYPE     = "INTEGER NULL DEFAULT 0";
+        static  final  String messageID_TYPE     = "TEXT NULL DEFAULT 0";
+
     }
 
 

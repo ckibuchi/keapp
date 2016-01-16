@@ -16,9 +16,9 @@
 
 package com.rube.tt.keapp.utils.emojicons;
 
-import com.rube.tt.keapp.utils.emojicons.emoji.Emojicon;
-
 import android.content.Context;
+
+import com.rube.tt.keapp.utils.emojicons.emoji.Emojicon;
 
 /**
 * @author Daniele Ricci

@@ -1,6 +1,5 @@
 package com.rube.tt.keapp.db;
 
-import android.app.Activity;
 import android.content.ContentResolver;
 import android.content.ContentValues;
 import android.content.Context;
@@ -10,6 +9,10 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.net.Uri;
 import android.provider.ContactsContract;
 import android.util.Log;
+
+import com.rube.tt.keapp.model.Status;
+import com.rube.tt.keapp.model.UserType;
+import com.rube.tt.keapp.models.ChatMessage;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -56,7 +59,7 @@ public class DbManager extends SQLiteOpenHelper {
         String limitString = " limit "+offset+", "+limit+" ";
 
         if(uri != null){
-            return this.getContentResolver().query(uri, PROJECTION, filter, null, order + limitString);
+                return this.getContentResolver().query(uri, PROJECTION, filter, null, order + limitString);
         }
 
         return this.getContentResolver().query(
@@ -109,6 +112,48 @@ public class DbManager extends SQLiteOpenHelper {
         return null;
 
     }
+    public  ArrayList<ChatMessage> getChats(String msisdn){
+        ArrayList<ChatMessage> listMessages=new ArrayList<ChatMessage>();
+        try {
+
+            SQLiteDatabase sqldb = getWritableDatabase();
+            String query = " SELECT *  FROM " + DB.Chat.TABLE + "  where " + DB.Chat.TO + " "
+                    + " = ? OR "+DB.Chat.FROM+" = ? order by " + DB.Chat._ID + " ASC";
+            Log.d("GETTING CHATS: ",query);
+            Cursor cursor = sqldb.rawQuery(query, new String[]{msisdn,msisdn});
+
+
+            if (cursor != null && cursor.moveToFirst()) {
+                Log.i("CHAT COUNT",""+cursor.getCount());
+                Log.i("CHAT DATA",""+cursor.toString());
+                do {
+                    Log.i("USER TYPE ","FRom DB "+cursor.getString(cursor.getColumnIndex(DB.Chat.USER_TYPE)));
+                    Log.i("USER TYPE ","Then "+UserType.valueOf(cursor.getString(cursor.getColumnIndex(DB.Chat.USER_TYPE))));
+                    Log.i("DATE CREATED ",cursor.getString(cursor.getColumnIndex(DB.Chat.DATE_CREATED)));
+                    ChatMessage chatMessage = new ChatMessage();
+                    chatMessage.setMessage(cursor.getString(cursor.getColumnIndex(DB.Chat.MESSAGE)));
+                    chatMessage.setFrom(cursor.getString(cursor.getColumnIndex(DB.Chat.FROM)));
+                    chatMessage.setMessageStatus(Status.valueOf(cursor.getString(cursor.getColumnIndex(DB.Chat.STATUS))));
+                    chatMessage.setUserType(UserType.valueOf(cursor.getString(cursor.getColumnIndex(DB.Chat.USER_TYPE))));
+                    chatMessage.setMessageTime(new Date(cursor.getString(cursor.getColumnIndex(DB.Chat.DATE_CREATED))));
+                    listMessages.add(chatMessage);
+
+                } while (cursor.moveToNext());
+
+                cursor.close();
+            }
+
+        }//End of try
+        catch(Exception e)
+        {
+            Log.d("SQL ERR ",e.getMessage());
+
+        }
+
+        return listMessages;
+
+    }
+
 
     public ArrayList<HashMap<String, String>> getUnsyncedItems(String table){
         SQLiteDatabase sqldb = getWritableDatabase();
@@ -150,6 +195,7 @@ public class DbManager extends SQLiteOpenHelper {
 
 
 
+
     public void updateContactAsInvited(String phone){
         Log.d(TAG, "Updating conatct as invited to the server:" + phone);
         SQLiteDatabase sqldb = getWritableDatabase();
@@ -171,7 +217,27 @@ public class DbManager extends SQLiteOpenHelper {
         Log.d(TAG, "Profile update success :" + phone + " profile:" + profileId);
 
     }
+    public void updateContactAsMember(String _id){
+        Log.d(TAG, "Updating conatct as member to the server:" + _id);
+        SQLiteDatabase sqldb = getWritableDatabase();
 
+        String query = " SELECT "+DB.Contact._ID+"  FROM "+DB.Contact.TABLE+"  where  "+DB.Contact._ID
+                + " = "+_id+"";
+        Log.i(TAG,query);
+        Cursor cursor = sqldb.rawQuery(query, null);
+        String profileId = "";
+        if (cursor != null ) {
+            cursor.moveToFirst();
+            profileId = cursor.getString(0);
+            cursor.close();
+        }
+        ContentValues args = new ContentValues();
+        args.put(DB.Contact.IS_MEMBER, 1);
+
+        sqldb.update(DB.Contact.TABLE, args, DB.Contact._ID + "=?", new String[]{_id});
+        Log.d(TAG, "Contact update success :" + _id + " profile:" + profileId);
+
+    }
     /*
     * (non-Javadoc)
     * @see
@@ -277,7 +343,7 @@ public class DbManager extends SQLiteOpenHelper {
 
     }
 
-    public long insertChat(int fromId,  int toId, String text, int status, String date){
+    public long insertChat(int fromId,  int toId, String text, String status, String date,String  user_tpe){
 
         if (fromId < 0 || toId < 0)
         {
@@ -292,6 +358,7 @@ public class DbManager extends SQLiteOpenHelper {
         args.put(DB.Chat.FROM, fromId);
         args.put(DB.Chat.TO, toId);
         args.put(DB.Chat.STATUS, status);
+        args.put(DB.Chat.USER_TYPE, user_tpe);
 
         long chatInsertId = sqldb.insert(DB.Chat.TABLE, null, args);
 
@@ -378,7 +445,7 @@ public class DbManager extends SQLiteOpenHelper {
     }
 
 
-    public long insertContact(int profileId, int statusId, String date) {
+    public long insertContact(int profileId, int statusId, String date,int member) {
 
         SQLiteDatabase sqldb = getWritableDatabase();
 
@@ -386,6 +453,7 @@ public class DbManager extends SQLiteOpenHelper {
         args.put(DB.Contact.DATE_CREATED, date);
         args.put(DB.Contact.PROFILE, profileId);
         args.put(DB.Contact.STATUS, statusId);
+        args.put(DB.Contact.IS_MEMBER,member);
 
         long contactInsertId = sqldb.insert(DB.Contact.TABLE, null, args);
 

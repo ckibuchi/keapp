@@ -83,7 +83,7 @@ public class KEApp extends ActionBarActivity implements SmsSendObserver.SmsSendL
 
     PagerSlidingTabStrip tabsStrip;
     ViewPager viewPager;
-
+    public  static int notif_counter=0;
     public int selectedTab = 0;
     public int INSERT_CONTACT = 1;
     public static int CREATE_INVITE_MESSAGE = 2;
@@ -97,7 +97,7 @@ public class KEApp extends ActionBarActivity implements SmsSendObserver.SmsSendL
         Intent i = getIntent();
         Bundle extras = i.getExtras();
         int currentPage = 1;
-
+        notif_counter=0;
 
         if(extras != null) {
             if (extras.containsKey("FULL_NAME")) {
@@ -318,6 +318,7 @@ public class KEApp extends ActionBarActivity implements SmsSendObserver.SmsSendL
             @Override
             protected void onPostExecute(Intent intent) {
                 progressBar.setVisibility(View.GONE);
+
             }
         }.execute();
 
@@ -394,7 +395,15 @@ public class KEApp extends ActionBarActivity implements SmsSendObserver.SmsSendL
             Log.d(TAG, "Calling sync contact to local :" +newContact.toString());
             for(ContactModel contactModel: contactModels){
                 Log.d(TAG, "Calling sync contact to local :" +contactModel.getPhoneNumber());
-                SyncAdapter.syncContactToLocal(contactModel, KEApp.this);
+                String phone=contactModel.getPhoneNumber();
+                phone=phone.replace("-", "");
+                phone=Utils.getNineDigits(phone);
+                if(phone==null)
+                {}
+                else {
+                    contactModel.setPhoneNumber(phone);
+                    SyncAdapter.syncContactToLocal(contactModel, KEApp.this);
+                }
             }
 
         }else if(requestCode == CREATE_INVITE_MESSAGE && resultCode == RESULT_OK){
@@ -413,6 +422,8 @@ public class KEApp extends ActionBarActivity implements SmsSendObserver.SmsSendL
 
     }
 
+    public static  void updatechats(String message,String from)
+    {}
 
 
 

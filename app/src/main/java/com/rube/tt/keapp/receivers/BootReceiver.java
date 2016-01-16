@@ -13,8 +13,6 @@ import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.util.Log;
 
-import com.rube.tt.keapp.services.XMPPService;
-
 import java.util.List;
 
 /** Allows the application to start at boot */
@@ -26,9 +24,9 @@ public class BootReceiver extends BroadcastReceiver {
         Log.d(TAG, "Boot receiver staring service ");
         boolean startAtBoot = prefs.getBoolean("startAtBoot", true);
         if (startAtBoot) {
-            Intent serviceIntent =createExplicitFromImplicitIntent(context, new Intent(XMPPService.ACTION_CONNECT));
+           /* Intent serviceIntent =createExplicitFromImplicitIntent(context, new Intent(XMPPService.ACTION_CONNECT));
             context.startService(serviceIntent);
-            Log.d(TAG, "Service start intent sent");
+            Log.d(TAG, "Service start intent sent");*/
         }
     }
 

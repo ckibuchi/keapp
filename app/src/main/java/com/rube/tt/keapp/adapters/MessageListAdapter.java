@@ -11,8 +11,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-
-import com.rube.tt.keapp.ChatView;
+import com.rube.tt.keapp.MainActivity;
 import com.rube.tt.keapp.R;
 import com.rube.tt.keapp.models.MessageModel;
 import com.rube.tt.keapp.utils.Constants;
@@ -138,7 +137,7 @@ public class MessageListAdapter extends BaseAdapter implements View.OnClickListe
 
         @Override
         public void onClick(View arg0) {
-            Intent i = new Intent(activity, ChatView.class);
+            Intent i = new Intent(activity, MainActivity.class);
             i.putExtra("selectedPage", mPosition);
             activity.startActivity(i);
         }

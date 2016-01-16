@@ -36,7 +36,7 @@ public class Constants {
     public static final String XMPP_PASSWORD = "admin";
     public static final String XMPP_RESOURCE = "phone";
 
-    public static final String SERVER_URL ="http://ustaditech.co.ke:8000/";// "http://192.168.122.1:8000/";
+    public static final String SERVER_URL ="http://104.236.71.65:8080/KEapp-Server/";// "http://192.168.122.1:8000/";
 
 
 

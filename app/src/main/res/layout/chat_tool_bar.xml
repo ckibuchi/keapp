@@ -38,6 +38,7 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/user_names"
                 android:text="Reuben Paul Wafula"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
@@ -49,7 +50,7 @@
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="Seen 23-01-2015 3:45 am"
+                android:text="Seen {{coming soon}}"
                 android:textColor="#c3c3c3"
                 android:textSize="14dp"/>
 

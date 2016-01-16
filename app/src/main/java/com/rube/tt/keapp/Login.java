@@ -34,10 +34,14 @@ import java.util.List;
 import static com.rube.tt.keapp.auth.AccountGeneral.ACCOUNT_TYPE;
 import static com.rube.tt.keapp.auth.AccountGeneral.sServerAuthenticate;
 
+//import com.rube.tt.keapp.utils.CustomAccountAunthenticationActivity;
+
+//import com.rube.tt.keapp.utils.CustomAccountAunthenticationActivity;
+
 /**
  * Created by rube on 5/23/15.
  */
-public class Login extends CustomAccountAunthenticationActivity{
+public class Login extends CustomAccountAunthenticationActivity {
 
     public final static String ARG_ACCOUNT_TYPE = "keapp.com";
     public final static String ARG_AUTH_TYPE = "AUTH_TYPE";
@@ -126,8 +130,9 @@ public class Login extends CustomAccountAunthenticationActivity{
         if (accountName != null) {
             ((TextView)findViewById(R.id.email_address)).setText(accountName);
         }
+        try {
         if (getIntent().getExtras() != null) {
-            try {
+
                 Uri date_url = getIntent().getData();
                 //String scheme = date_url.getScheme(); // "http"
                 //String host = date_url.getHost(); // "keapp.com"
@@ -137,11 +142,12 @@ public class Login extends CustomAccountAunthenticationActivity{
                 EditText mail = (EditText) findViewById(R.id.email_address);
                 mail.setText(email);
             }
-            catch(Exception e)
-            {
-                e.printStackTrace();
-            }
 
+
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
         }
 
         findViewById(R.id.submit).setOnClickListener(new View.OnClickListener() {
@@ -332,7 +338,7 @@ public void registerviews()
                     authtoken= sServerAuthenticate.userSignIn(email, userPass, authTokenType);
 
                     if(authtoken != null) {
-                        data.putString(AccountManager.KEY_ACCOUNT_NAME, email);
+                        data.putString(AccountManager.KEY_ACCOUNT_NAME, authtoken);
                         data.putString(AccountManager.KEY_ACCOUNT_TYPE, accountType);
                         data.putString(AccountManager.KEY_AUTHTOKEN, authtoken);
                         data.putString(PARAM_USER_PASS, userPass);
@@ -350,7 +356,7 @@ public void registerviews()
                 } catch (Exception e) {
                     Log.d(TAG, "Hitting Error "+e.getMessage());
                     e.printStackTrace();
-                    data.putString(KEY_ERROR_MESSAGE, "Error, Login failed. Please try again later");
+                    data.putString(KEY_ERROR_MESSAGE, "Error, GET failed. Please try again later");
                 }
 
                 if(res == null){
@@ -426,7 +432,13 @@ public void registerviews()
                 accountManager.setAuthToken(account, authTokenType, authToken);
             } else {
                 Log.d(TAG, "finishLogin > setPassword");
-                accountManager.setPassword(account, accountPassword);
+                try {
+                    accountManager.setPassword(account, accountPassword);
+                }
+                catch(Exception e)
+                {
+                    e.printStackTrace();
+                }
             }
 
             editor.commit();

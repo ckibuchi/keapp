@@ -13,7 +13,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.rube.tt.keapp.ChatView;
+import com.rube.tt.keapp.MainActivity;
 import com.rube.tt.keapp.R;
 import com.rube.tt.keapp.fragments.ContactFragment;
 import com.rube.tt.keapp.models.ContactModel;
@@ -124,6 +124,7 @@ public class ContactListAdapter extends BaseAdapter {
         holder.phoneNumber.setText(contactModel.getPhoneNumber());
         /******** Set Item Click Listner for LayoutInflater for each row *******/
         //Display invite button id not member
+        Log.i("IS MEMBER NOW? ",""+contactModel.isMember());
         if (contactModel.isMember()) {
             holder.inviteButtonView.setVisibility(View.GONE);
         }else if(contactModel.isInvited()){
@@ -157,10 +158,12 @@ public class ContactListAdapter extends BaseAdapter {
 
             if(contactModel.isMember()){
                 //load chat window
-                Intent i = new Intent(activity, ChatView.class);
+                Intent i = new Intent(activity, MainActivity.class);
                 i.putExtra("phone", contactModel.getPhoneNumber());
+                i.putExtra("name", contactModel.getName());
+
                 activity.startActivity(i);
-                activity.finish();
+               // activity.finish();
 
             }
            else if(contactModel.isInvited()){

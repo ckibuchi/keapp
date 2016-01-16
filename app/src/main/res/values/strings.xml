@@ -37,4 +37,23 @@
     <string name="title_forgot_password">Password Reset</string>
     <string name="title_finish_signup">Signup Success</string>
     <string name="title_login_failed">Login Failed</string>
+
+    <string name="error_config">Please set the %1$s constant and recompile the app.</string>
+    <string name="already_registered">Already registered.</string>
+    <string name="gcm_registered">GCM: Successfully registered.</string>
+    <string name="gcm_unregistered">GCM: Successfully unregistered.</string>
+    <string name="gcm_message">GCM: Got message!</string>
+    <string name="gcm_error">GCM: error (%1$s).</string>
+    <string name="gcm_recoverable_error">GCM: recoverable error (%1$s).</string>
+    <string name="gcm_deleted">GCM: deleted %1$d pending messages!</string>
+    <string name="server_registered">Android device added.</string>
+    <string name="server_unregistered">Android device removed.</string>
+    <string name="server_unregister_error">Could not unregister Android device on App Server (%1$s).</string>
+    <string name="options_register">Register</string>
+    <string name="options_unregister">Unregister</string>
+    <string name="options_clear">Clear</string>
+    <string name="options_exit">Exit</string>
+    <string name="type_your_message">Enter msg</string>
+    <string name="NoRecent">No recent</string>
+
 </resources>

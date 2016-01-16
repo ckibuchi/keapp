@@ -16,17 +16,6 @@
 
 package com.rube.tt.keapp.utils.emojicons;
 
-import com.rube.tt.keapp.utils.emojicons.EmojiconGridView.OnEmojiconClickedListener;
-import com.rube.tt.keapp.utils.emojicons.emoji.Emojicon;
-import com.rube.tt.keapp.utils.emojicons.emoji.Nature;
-import com.rube.tt.keapp.utils.emojicons.emoji.Objects;
-import com.rube.tt.keapp.utils.emojicons.emoji.People;
-import com.rube.tt.keapp.utils.emojicons.emoji.Places;
-import com.rube.tt.keapp.utils.emojicons.emoji.Symbols;
-
-import java.util.Arrays;
-import java.util.List;
-
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.Rect;
@@ -43,7 +32,18 @@ import android.view.ViewGroup;
 import android.view.ViewTreeObserver.OnGlobalLayoutListener;
 import android.view.WindowManager.LayoutParams;
 import android.widget.PopupWindow;
+
 import com.rube.tt.keapp.R;
+import com.rube.tt.keapp.utils.emojicons.EmojiconGridView.OnEmojiconClickedListener;
+import com.rube.tt.keapp.utils.emojicons.emoji.Emojicon;
+import com.rube.tt.keapp.utils.emojicons.emoji.Nature;
+import com.rube.tt.keapp.utils.emojicons.emoji.Objects;
+import com.rube.tt.keapp.utils.emojicons.emoji.People;
+import com.rube.tt.keapp.utils.emojicons.emoji.Places;
+import com.rube.tt.keapp.utils.emojicons.emoji.Symbols;
+
+import java.util.Arrays;
+import java.util.List;
 
 
 /**
@@ -59,7 +59,7 @@ public class EmojiconsPopup extends PopupWindow implements ViewPager.OnPageChang
 	private Boolean pendingOpen = false;
 	private Boolean isOpened = false;
 	OnEmojiconClickedListener onEmojiconClickedListener;
-	OnEmojiconBackspaceClickedListener onEmojiconBackspaceClickedListener; 
+	OnEmojiconBackspaceClickedListener onEmojiconBackspaceClickedListener;
 	OnSoftKeyboardOpenCloseListener onSoftKeyboardOpenCloseListener;
 	View rootView;
 	Context mContext;
@@ -77,14 +77,14 @@ public class EmojiconsPopup extends PopupWindow implements ViewPager.OnPageChang
 		View customView = createCustomView();
 		setContentView(customView);
 		setSoftInputMode(LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE);
-		//default size 
+		//default size
 		setSize((int) mContext.getResources().getDimension(R.dimen.keyboard_height), LayoutParams.MATCH_PARENT);
 	}
 	/**
 	 * Set the listener for the event of keyboard opening or closing.
 	 */
 	public void setOnSoftKeyboardOpenCloseListener(OnSoftKeyboardOpenCloseListener listener){
-		this.onSoftKeyboardOpenCloseListener = listener; 
+		this.onSoftKeyboardOpenCloseListener = listener;
 	}
 
 	/**
@@ -103,20 +103,20 @@ public class EmojiconsPopup extends PopupWindow implements ViewPager.OnPageChang
 
 	/**
 	 * Use this function to show the emoji popup.
-	 * NOTE: Since, the soft keyboard sizes are variable on different android devices, the 
+	 * NOTE: Since, the soft keyboard sizes are variable on different android devices, the
 	 * library needs you to open the soft keyboard atleast once before calling this function.
 	 * If that is not possible see showAtBottomPending() function.
-	 * 
+	 *
 	 */
 	public void showAtBottom(){
 		showAtLocation(rootView, Gravity.BOTTOM, 0, 0);
 	}
 	/**
-	 * Use this function when the soft keyboard has not been opened yet. This 
+	 * Use this function when the soft keyboard has not been opened yet. This
 	 * will show the emoji popup after the keyboard is up next time.
-	 * Generally, you will be calling InputMethodManager.showSoftInput function after 
+	 * Generally, you will be calling InputMethodManager.showSoftInput function after
 	 * calling this function.
-	 */ 
+	 */
 	public void showAtBottomPending(){
 		if(isKeyBoardOpen())
 			showAtBottom();
@@ -125,7 +125,7 @@ public class EmojiconsPopup extends PopupWindow implements ViewPager.OnPageChang
 	}
 
 	/**
-	 * 
+	 *
 	 * @return Returns true if the soft keyboard is open, false otherwise.
 	 */
 	public Boolean isKeyBoardOpen(){

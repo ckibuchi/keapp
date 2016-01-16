@@ -16,16 +16,16 @@
 
 package com.rube.tt.keapp.utils.emojicons;
 
-import com.rube.tt.keapp.utils.emojicons.emoji.Emojicon;
 import android.content.Context;
 import android.widget.GridView;
 
 import com.rube.tt.keapp.R;
+import com.rube.tt.keapp.utils.emojicons.emoji.Emojicon;
 
 
 public class EmojiconRecentsGridView extends EmojiconGridView implements EmojiconRecents {
 	EmojiAdapter mAdapter;
-	
+
 	public EmojiconRecentsGridView(Context context, Emojicon[] emojicons,
 			EmojiconRecents recents,EmojiconsPopup emojiconsPopup) {
 		super(context, emojicons, recents, emojiconsPopup);
@@ -33,7 +33,7 @@ public class EmojiconRecentsGridView extends EmojiconGridView implements Emojico
 	            .getInstance(rootView.getContext());
 		mAdapter = new EmojiAdapter(rootView.getContext(),  recents1);
 		mAdapter.setEmojiClickListener(new OnEmojiconClickedListener() {
-			
+
 			@Override
 			public void onEmojiconClicked(Emojicon emojicon) {
 				if (mEmojiconPopup.onEmojiconClickedListener != null) {

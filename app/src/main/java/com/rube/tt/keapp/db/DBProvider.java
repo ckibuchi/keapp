@@ -1,7 +1,6 @@
 package com.rube.tt.keapp.db;
 
 import android.content.ContentProvider;
-import android.content.ContentProviderClient;
 import android.content.ContentUris;
 import android.content.ContentValues;
 import android.content.Context;
@@ -11,6 +10,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteQueryBuilder;
 import android.net.Uri;
 import android.util.Log;
+
+import com.rube.tt.keapp.models.ContactModel;
 
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
@@ -329,7 +330,15 @@ public class DBProvider  extends ContentProvider{
         return insertedUri;
 
     }
+    public int updateUserStatus(String tableName, int status, String memberid){
+        Log.d(TAG, "Updating user as "+status+" to table "+tableName+" For member id "+memberid);
+        SQLiteDatabase sqldb = this.dbManager.getWritableDatabase();
+        ContentValues args = new ContentValues();
+        args.put(DB.Contact.IS_MEMBER, status);
 
+        return sqldb.update(tableName, args, "_id="+memberid,null);
+
+    }
     /**
      * (non-Javadoc)
      * @see android.content.ContentProvider#update(android.net.Uri, android.content.ContentValues, java.lang.String, java.lang.String[])
@@ -339,7 +348,7 @@ public class DBProvider  extends ContentProvider{
     {
         //Handle update later here
 
-        Log.d( TAG, "insert on "+uri );
+        Log.d( TAG, "update on "+uri );
         int update = -1;
         SQLiteDatabase sqlDB = this.dbManager.getWritableDatabase();
         int match = DBProvider.sURIMatcher.match( uri );
@@ -619,15 +628,16 @@ public class DBProvider  extends ContentProvider{
         int  fromId = values.getAsInteger(DB.Chat.FROM);
         int  toId = values.getAsInteger(DB.Chat.TO);
         String text = values.getAsString(DB.Chat.MESSAGE);
-        int status = values.getAsInteger(DB.Chat.STATUS);
+        String status = values.getAsString(DB.Chat.STATUS);
         String date = values.getAsString(DB.Chat.DATE_CREATED);
+        String user_tpe = values.getAsString(DB.Chat.USER_TYPE);
 
         if(date == null){
             SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd hh:ss");
             date = df.format(new Date());
 
         }
-        long chatId = this.dbManager.insertChat(fromId, toId, text, status, date);
+        long chatId = this.dbManager.insertChat(fromId, toId, text, status, date, user_tpe);
         Log.d( TAG, "Have inserted to chat with id "+chatId );
         return ContentUris.withAppendedId(uri, chatId);
 
@@ -692,15 +702,25 @@ public class DBProvider  extends ContentProvider{
         int  profileId = values.getAsInteger(DB.Contact.PROFILE);
         int  statusId = values.getAsInteger(DB.Contact.STATUS);
         String date = values.getAsString(DB.Contact.DATE_CREATED);
+        int member  = values.getAsInteger(DB.Contact.IS_MEMBER);
 
         if(date == null){
             SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd hh:ss");
             date = df.format(new Date());
         }
-        long contactId = this.dbManager.insertContact(profileId, statusId, date);
+        long contactId = this.dbManager.insertContact(profileId, statusId, date, member);
         Log.d( TAG, "Have inserted to contact with id "+contactId );
         return ContentUris.withAppendedId(uri, contactId);
 
+
+    }
+    public int updateContactAsMember(ContactModel contactModel){
+        Log.d(TAG, "Updating user on table "+DB.Contact.TABLE+" For member id "+contactModel.getId());
+        SQLiteDatabase sqldb = this.dbManager.getWritableDatabase();
+        ContentValues args = new ContentValues();
+        args.put(DB.Contact.IS_MEMBER, 1);
+
+        return sqldb.update(DB.Contact.TABLE, args, "_id="+contactModel.getId(),null);
 
     }
 

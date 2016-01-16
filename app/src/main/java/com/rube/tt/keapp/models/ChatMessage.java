@@ -1,34 +1,69 @@
 package com.rube.tt.keapp.models;
 
+import com.rube.tt.keapp.model.Status;
+import com.rube.tt.keapp.model.UserType;
+
+import java.util.Date;
+
 /**
  * Created by rube on 4/15/15.
  */
 public class ChatMessage {
 
-    private String fromName, message;
+    private String from, message;
     private String to;
     private boolean isSelf;
-    private String chatDate;
+    private Date messageTime;
     private boolean sent = false;
     private boolean delivered = false;
+
+    public String getMessageID() {
+        return messageID;
+    }
+
+    public void setMessageID(String messageID) {
+        this.messageID = messageID;
+    }
+
+    private String messageID;
+
+    public UserType getUserType() {
+        return userType;
+    }
+
+    public void setUserType(UserType userType) {
+        this.userType = userType;
+    }
+
+    private UserType userType;
+
+    public Status getMessageStatus() {
+        return messageStatus;
+    }
+
+    public void setMessageStatus(Status messageStatus) {
+        this.messageStatus = messageStatus;
+    }
+
+    private Status messageStatus;
 
     public ChatMessage() {
     }
 
-    public ChatMessage(String fromName, String message, String chatDate, boolean isSelf, String to) {
-        this.fromName = fromName;
+    public ChatMessage(String fromName, String message, Date messageTime, boolean isSelf, String to) {
+        this.from = fromName;
         this.message = message;
         this.isSelf = isSelf;
-        this.chatDate = chatDate;
+        this.messageTime = messageTime;
         this.to = to;
     }
 
-    public String getFromName() {
-        return fromName;
+    public String getFrom() {
+        return from;
     }
 
-    public void setFromName(String fromName) {
-        this.fromName = fromName;
+    public void setFrom(String from) {
+        this.from = from;
     }
 
     public String getMessage() {
@@ -47,12 +82,12 @@ public class ChatMessage {
             this.isSelf = isSelf;
         }
 
-    public String getChatDate() {
-        return chatDate;
+    public Date getMessageTime() {
+        return messageTime;
     }
 
-    public void setChatDate(String chatDate) {
-        this.chatDate = chatDate;
+    public void setMessageTime(Date messageTime) {
+        this.messageTime = messageTime;
     }
 
     public String getTo() {

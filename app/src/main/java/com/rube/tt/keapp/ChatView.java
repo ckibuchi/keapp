@@ -1,41 +1,32 @@
 package com.rube.tt.keapp;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.util.Log;
-import android.view.KeyEvent;
-import android.view.View;
 import android.view.WindowManager;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
-import android.widget.PopupWindow;
+import android.widget.TextView;
 
 import com.rube.tt.keapp.adapters.ChatMessageListAdapter;
 import com.rube.tt.keapp.models.ChatMessage;
-import com.rube.tt.keapp.services.XMPPService;
-import com.rube.tt.keapp.utils.Constants;
-import com.rube.tt.keapp.utils.emojicons.EmojiconEditText;
+//import com.rube.tt.keapp.xmpp.XMPPManager;
+
+import java.util.ArrayList;
+
+/*import com.rube.tt.keapp.utils.emojicons.EmojiconEditText;
 import com.rube.tt.keapp.utils.emojicons.EmojiconGridView;
 import com.rube.tt.keapp.utils.emojicons.EmojiconTextView;
 import com.rube.tt.keapp.utils.emojicons.EmojiconsPopup;
-import com.rube.tt.keapp.utils.emojicons.emoji.Emojicon;
-import com.rube.tt.keapp.xmpp.XMPPManager;
-
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
+import com.rube.tt.keapp.utils.emojicons.emoji.Emojicon;*/
 
 /**
  * Created by rube on 4/15/15.
@@ -47,9 +38,9 @@ public class ChatView extends ActionBarActivity {
 
     private Button btnSend;
     private EditText inputMsg;
-
+/*
     EmojiconEditText mEditEmojicon;
-    EmojiconTextView mTxtEmojicon;
+    EmojiconTextView mTxtEmojicon;*/
     CheckBox mCheckBox;
 
     // Chat messages list adapter
@@ -61,7 +52,7 @@ public class ChatView extends ActionBarActivity {
     private LinearLayout parentLayout;
     private ImageView emojiconsSubmit;
     private LinearLayout emojiconsNonSubmit;
-    private XMPPManager xmppManager;
+    //private XMPPManager xmppManager;
 
     // Client name
     private String name = null;
@@ -80,6 +71,7 @@ public class ChatView extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_chat_layout);
+       // setContentView(R.layout.activity_main);
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
         toolbar = (Toolbar)findViewById(R.id.new_chat_toolbar_layout);
         toolbar.getMenu().clear();
@@ -95,6 +87,13 @@ public class ChatView extends ActionBarActivity {
         // Getting the person name from previous screen
         Intent i = getIntent();
         name = i.getStringExtra("name");
+            try
+                {
+                    TextView username=(TextView)findViewById(R.id.user_names);
+                    username.setText(name);
+                }
+                catch(Exception e)
+                {}
 
         listMessages = new ArrayList<ChatMessage>();
 
@@ -102,7 +101,7 @@ public class ChatView extends ActionBarActivity {
         listViewMessages.setAdapter(adapter);
 
         //adding emoji
-        mEditEmojicon = (EmojiconEditText) findViewById(R.id.editEmojicon);
+       // mEditEmojicon = (EmojiconEditText) findViewById(R.id.editEmojicon);
 
 
         emojiconsIcon = (ImageView)findViewById(R.id.emojicons_pop_icon);
@@ -111,7 +110,7 @@ public class ChatView extends ActionBarActivity {
         Log.d(TAG, "Found parent layout "+parentLayout.toString());
         //emojiFrameLayout = (FrameLayout)findViewById(R.id.emojicons);
 
-        final EmojiconsPopup popup = new EmojiconsPopup(parentLayout, this);
+    /*    final EmojiconsPopup popup = new EmojiconsPopup(parentLayout, this);
 
 
         //submit button image
@@ -254,16 +253,16 @@ public class ChatView extends ActionBarActivity {
                 mEditEmojicon.getText().clear();
                 SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd hh:mm");
 
-                ChatMessage chatMessage = new ChatMessage();
-                chatMessage.setFromName("admin@"+ Constants.XMPP_SERVICE);
+                ChatMessage2 chatMessage = new ChatMessage2();
+                chatMessage.setFrom("admin@"+ Constants.XMPP_SERVICE);
                 chatMessage.setTo("rube@"+Constants.XMPP_SERVICE);
                 chatMessage.setSent(false);
                 chatMessage.setDelivered(false);
                 chatMessage.setMessage(newText);
-                chatMessage.setChatDate(format.format(new Date()));
+                chatMessage.setMessageTime(format.format(new Date()));
                 chatMessage.setSelf(true);
 
-                ArrayList<ChatMessage> chatMessageList = new ArrayList<ChatMessage>();
+                ArrayList<ChatMessage2> chatMessageList = new ArrayList<ChatMessage2>();
                 chatMessageList.add(chatMessage);
 
                 adapter.update(chatMessageList);
@@ -271,14 +270,14 @@ public class ChatView extends ActionBarActivity {
                 //send message to chat server
                 Intent intent = new Intent(XMPPService.ACTION_SEND);
                 intent.putExtra("message", chatMessage.getMessage());
-                intent.putExtra("from", chatMessage.getFromName());
+                intent.putExtra("from", chatMessage.getFrom());
                 intent.putExtra("to", chatMessage.getTo());
-                intent.putExtra("chat_date", chatMessage.getChatDate());
+                intent.putExtra("chat_date", chatMessage.getMessageTime());
                 intent.putExtra("position", adapter.getCount()-1);
                 startService(intent);
 
             }
-        });
+        });*/
 
         //load the chat server
 
@@ -301,39 +300,39 @@ public class ChatView extends ActionBarActivity {
             listMessages = new ArrayList<ChatMessage>();
 
             ChatMessage chatMessage = new ChatMessage();
-            chatMessage.setFromName("Reuben Paul Wafula");
+            chatMessage.setFrom("Reuben Paul Wafula");
             chatMessage.setMessage("Hi there?");
             chatMessage.setTo("admin");
             chatMessage.setSent(true);
             chatMessage.setDelivered(true);
-            chatMessage.setChatDate("15:35pm");
+            //chatMessage.setMessageTime("15:35pm");
             chatMessage.setSelf(true);
 
             listMessages.add(chatMessage);
 
             chatMessage = new ChatMessage();
-            chatMessage.setFromName("Madam O");
+            chatMessage.setFrom("Madam O");
             chatMessage.setTo("admin");
             chatMessage.setMessage("Hi, Did you get my message?");
-            chatMessage.setChatDate("15:36pm");
+          //  chatMessage.setMessageTime("15:36pm");
             chatMessage.setSelf(false);
             chatMessage.setSent(true);
             chatMessage.setDelivered(true);
             listMessages.add(chatMessage);
 
             chatMessage = new ChatMessage();
-            chatMessage.setFromName("Reuben Paul Wafula");
+            chatMessage.setFrom("Reuben Paul Wafula");
             chatMessage.setMessage("Ya, n am not buying the bananas!");
-            chatMessage.setChatDate("15:37pm");
+            //chatMessage.setMessageTime("15:37pm");
             chatMessage.setSelf(true);
             chatMessage.setSent(true);
             chatMessage.setDelivered(true);
             listMessages.add(chatMessage);
 
             chatMessage = new ChatMessage();
-            chatMessage.setFromName("Reuben Paul Wafula");
+            chatMessage.setFrom("Reuben Paul Wafula");
             chatMessage.setMessage("What did u expect?");
-            chatMessage.setChatDate("15:38pm");
+           // chatMessage.setMessageTime("15:38pm");
             chatMessage.setTo("admin");
             chatMessage.setSelf(true);
             chatMessage.setSent(true);
@@ -341,10 +340,10 @@ public class ChatView extends ActionBarActivity {
             listMessages.add(chatMessage);
 
             chatMessage = new ChatMessage();
-            chatMessage.setFromName("Madam O");
+            chatMessage.setFrom("Madam O");
             chatMessage.setMessage("bastard!");
             chatMessage.setTo("admin");
-            chatMessage.setChatDate("15:39pm");
+            //chatMessage.setMessageTime("15:39pm");
             chatMessage.setSelf(false);
             chatMessage.setSent(true);
             chatMessage.setDelivered(false);

@@ -18,8 +18,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.rube.tt.keapp.ChatView;
 import com.rube.tt.keapp.KEApp;
+import com.rube.tt.keapp.MainActivity;
 import com.rube.tt.keapp.R;
 import com.rube.tt.keapp.adapters.ContactListAdapter;
 import com.rube.tt.keapp.db.DB;
@@ -109,7 +109,8 @@ public class ContactFragment extends Fragment {
 
             if(contactModel.isMember()){
                 //load chat window
-                final Intent chatactivity = new Intent(activity, ChatView.class);
+                final Intent chatactivity = new Intent(activity, MainActivity.class);
+                Log.d("Names ",contactModel.getName());
                 chatactivity.putExtra("name", contactModel.getName());
                 activity.startActivity(chatactivity);
             }else{
@@ -147,18 +148,35 @@ public class ContactFragment extends Fragment {
         try {
             if (localContacts.moveToFirst()) {
                 do {
+                    int isMember = localContacts.getInt(localContacts.getColumnIndex(DB.Contact.IS_MEMBER));
+
                     //Long photoId = localContacts.getLong(localContacts.getColumnIndex(DB.Profile.PHOTO));
                     String name = localContacts.getString(localContacts.getColumnIndex(DB.Profile.NAME));
                     String message = localContacts.getString(localContacts.getColumnIndex(DB.ProfileStatus.MESSAGE));
                     String msisdn = localContacts.getString(localContacts.getColumnIndex(DB.Profile.MSISDN));
                     String photoPath = localContacts.getString(localContacts.getColumnIndex(DB.Profile.PHOTO));
-                    int isMember = localContacts.getInt(localContacts.getColumnIndex(DB.Contact.IS_MEMBER));
 
 
+
+
+                    int id = localContacts.getInt(localContacts.getColumnIndex(DB.Contact._ID));
+                    Log.i("Actual status ",msisdn+", is member "+isMember+" ID "+id+" alt "+localContacts.getInt(localContacts.getColumnIndex(DB.Contact._ID)));
+
+                    msisdn=msisdn.replace("-", "");
+                    msisdn=Utils.getNineDigits(msisdn);
+                    if(msisdn==null)
+                    {
+                        Log.e("NUMBER ERR ","INVALID PHONE ");
+                    }
+                    else
+                    {
                     simpleContactModel = new ContactModel();
                     simpleContactModel.setName(name);
+                    simpleContactModel.setId(id);
+                    Log.d("Immediate id ", "" + simpleContactModel.getId());
                     simpleContactModel.setPhoneNumber(msisdn);
                     simpleContactModel.setStatusMessage(message);
+                    Log.i("Immediate member? ",""+isMember);
                     if(isMember == 1){
                         simpleContactModel.setIsMember(true);
                     }else if(isMember ==2){
@@ -168,7 +186,7 @@ public class ContactFragment extends Fragment {
                     Log.d(TAG, "Looking form image on "+photoPath);
 
                     simpleContactModel.setPic(Utils.getImageBitmap(activity, photoPath, "profile", 55, 55));
-                    simpleContactModels.add(simpleContactModel);
+                    simpleContactModels.add(simpleContactModel);}
 
                 } while (localContacts.moveToNext());
             }

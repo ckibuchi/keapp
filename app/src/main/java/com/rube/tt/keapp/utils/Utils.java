@@ -9,7 +9,6 @@ import android.content.Context;
 import android.content.ContextWrapper;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.content.res.Resources;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -31,14 +30,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.rube.tt.keapp.R;
-import com.rube.tt.keapp.db.DB;
-import com.rube.tt.keapp.db.DBProvider;
 import com.rube.tt.keapp.db.DbManager;
 import com.rube.tt.keapp.models.ContactModel;
-import com.rube.tt.keapp.models.SimpleContactModel;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -89,16 +84,28 @@ public class Utils {
         Cursor cursor = null;
         try {
             cursor = dbManager.getPhoneContactsCursor(filter, offset, limit, uri);
-
+                int count=0;
             if (cursor.moveToFirst()) {
                 do {
+                 /*   if(count>10)
+                    {
+                        break;
+                    }
+                    count+=1;*/
                     // names comes in hand sometimes
-                    Long photoId = cursor.getLong(4);
-                    simpleContactModel = new ContactModel();
-                    simpleContactModel.setName(cursor.getString(1));
-                    simpleContactModel.setPhoneNumber(cursor.getString(3));
-                    simpleContactModel.setPic(getContactPhoto(context, photoId));
-                    simpleContactModels.add(simpleContactModel);
+                    String phone=cursor.getString(3);
+                    phone=phone.replace("-", "");
+                    phone=Utils.getNineDigits(phone);
+                    if(phone!=null) {
+                        Long photoId = cursor.getLong(4);
+                        simpleContactModel = new ContactModel();
+                        simpleContactModel.setName(cursor.getString(1));
+                        simpleContactModel.setId(cursor.getInt(0));
+
+                        simpleContactModel.setPhoneNumber(cursor.getString(3));
+                        simpleContactModel.setPic(getContactPhoto(context, photoId));
+                        simpleContactModels.add(simpleContactModel);
+                    }
 
                 } while (cursor.moveToNext());
             }
@@ -113,7 +120,18 @@ public class Utils {
 
         return simpleContactModels;
     }
+        public static String getNineDigits(String phone)
+        {
+            try{
+                return phone.trim().substring(phone.trim().length() - 9, phone.trim().length());
 
+            }
+            catch(Exception e)
+            {
+                return null;
+            }
+
+        }
     public static Bitmap getContactPhoto(Context context, long contactID) {
 
         Bitmap photo = null;

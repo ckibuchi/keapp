@@ -9,7 +9,7 @@ import java.util.ArrayList;
  */
 
 public interface ServerAuthenticate {
-    public String userSignUp(ArrayList<NameValuePair> nameValuePairs, String authType) throws Exception;
+    public String userSignUp(ArrayList<NameValuePair> nameValuePairs,String pass, String authType) throws Exception;
     public String userSignIn(final String user, final String pass, String authType) throws Exception;
 
 }

@@ -16,13 +16,13 @@
 
 package com.rube.tt.keapp.utils.emojicons;
 
+import android.content.Context;
+import android.content.SharedPreferences;
+
 import com.rube.tt.keapp.utils.emojicons.emoji.Emojicon;
 
 import java.util.ArrayList;
 import java.util.StringTokenizer;
-
-import android.content.Context;
-import android.content.SharedPreferences;
 
 
 /**
@@ -88,7 +88,7 @@ public class EmojiconRecentsManager extends ArrayList<Emojicon> {
         boolean ret = super.remove(object);
         return ret;
     }
-    
+
     private SharedPreferences getPreferences() {
         return mContext.getSharedPreferences(PREFERENCE_NAME, Context.MODE_PRIVATE);
     }
@@ -106,7 +106,7 @@ public class EmojiconRecentsManager extends ArrayList<Emojicon> {
             }
         }
     }
-    
+
     public void saveRecents() {
         StringBuilder str = new StringBuilder();
         int c = size();

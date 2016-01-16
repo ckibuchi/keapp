@@ -15,11 +15,11 @@
  */
 package com.rube.tt.keapp.utils.emojicons;
 
-import com.rube.tt.keapp.R;
-
 import android.content.Context;
 import android.text.Spannable;
 import android.util.SparseIntArray;
+
+import com.rube.tt.keapp.R;
 
 /**
  * @author Hieu Rocker (rockerhieu@gmail.com)

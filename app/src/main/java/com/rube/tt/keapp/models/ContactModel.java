@@ -8,6 +8,8 @@ import android.graphics.Bitmap;
 public class ContactModel {
 
 
+
+    private int id;
     private String name;
     private Bitmap pic;
     private String date;
@@ -44,7 +46,13 @@ public class ContactModel {
     public String getStatusMessage() {
         return statusMessage;
     }
+    public void setId(int id) {
+        this.id = id;
+    }
 
+    public int getId() {
+        return id;
+    }
     public void setStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
     }
@@ -57,6 +65,8 @@ public class ContactModel {
     }
 
     public String getPhoneNumber() {
+        phoneNumber=phoneNumber.replace(" ","");
+        phoneNumber=phoneNumber.trim();
         return phoneNumber;
     }
 

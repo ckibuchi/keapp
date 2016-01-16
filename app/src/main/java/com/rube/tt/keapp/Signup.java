@@ -10,6 +10,9 @@ import android.app.ProgressDialog;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -17,6 +20,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.telephony.TelephonyManager;
 import android.text.Editable;
+import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
@@ -24,6 +28,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.gcm.GoogleCloudMessaging;
 import com.rube.tt.keapp.auth.AccountGeneral;
 import com.rube.tt.keapp.db.DB;
 import com.rube.tt.keapp.db.DBProvider;
@@ -32,6 +37,7 @@ import com.rube.tt.keapp.utils.Validation;
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 import static com.rube.tt.keapp.Login.ARG_ACCOUNT_TYPE;
@@ -49,17 +55,25 @@ import static com.rube.tt.keapp.auth.AccountGeneral.sServerAuthenticate;
  */
 public class Signup extends ActionBarActivity {
 
-    private String TAG = getClass().getSimpleName();
     private String mAccountType;
     private Toolbar toolbar;
     private ProgressDialog progressDialog;
-    EditText _name,_mail,_passworda,_passwordb,_phone;
+    GoogleCloudMessaging gcm;
+    Context context;
+    String regId;
 
+    public static final String REG_ID = "regId";
+    private static final String APP_VERSION = "appVersion";
+
+    static final String TAG = Signup.class.getSimpleName();
+    EditText _name,_mail,_passworda,_passwordb,_phone;
+String regid=null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.register);
+        context = getApplicationContext();
         registerviews();
         try {
             TelephonyManager telemamanger = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
@@ -183,7 +197,19 @@ public class Signup extends ActionBarActivity {
     private void createAccount() {
 
         // TODO:  Validation!
+        try
+        {
 
+            regid=registerGCM();
+
+
+        }
+        catch(Exception e)
+        {
+
+            e.printStackTrace();
+            return;
+        }
         new AsyncTask<String, Void, Intent>() {
 
 
@@ -191,22 +217,34 @@ public class Signup extends ActionBarActivity {
             String _email = _mail.getText().toString().trim();
             String accountPassword = _passworda.getText().toString().trim();
             String msisdn=_phone.getText().toString().trim();
+            String regid=null;
             final ArrayList<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
 
             @Override
             protected Intent doInBackground(String... params) {
-                nameValuePairs.add(new BasicNameValuePair("username", name));
-                nameValuePairs.add(new BasicNameValuePair("email", _email));
-                nameValuePairs.add(new BasicNameValuePair("password", accountPassword));
-                nameValuePairs.add(new BasicNameValuePair("first_name", name));
-                nameValuePairs.add(new BasicNameValuePair("msisdn", msisdn));
-                Log.d(TAG,   "> Started Reg");
 
                 String authtoken = null;
                 Intent result;
                 Bundle data = new Bundle();
+
+                nameValuePairs.add(new BasicNameValuePair("username", _email));
+                nameValuePairs.add(new BasicNameValuePair("email", _email));
+                nameValuePairs.add(new BasicNameValuePair("password", accountPassword));
+                nameValuePairs.add(new BasicNameValuePair("first_name", name));
+                nameValuePairs.add(new BasicNameValuePair("last_name", name));
+                nameValuePairs.add(new BasicNameValuePair("msisdn", msisdn));
+                nameValuePairs.add(new BasicNameValuePair("regId", regid));
+                Log.d(TAG,   "> Started Reg");
+
+
+                if(regid==null) {
+                    result = new Intent();
+                    data.putString(KEY_ERROR_MESSAGE, "Unable To Register your Device. Try later");
+                }
+                nameValuePairs.add(new BasicNameValuePair("regId", regid));
+
                 try {
-                    authtoken = sServerAuthenticate.userSignUp(nameValuePairs,AccountGeneral.AUTHTOKEN_TYPE_FULL_ACCESS);
+                    authtoken = sServerAuthenticate.userSignUp(nameValuePairs,AccountGeneral.AUTHTOKEN_TYPE_FULL_ACCESS,accountPassword);
 
                     if (authtoken != null){
                         createProfile(name, _email);
@@ -223,10 +261,11 @@ public class Signup extends ActionBarActivity {
 
                 } catch (Exception e) {
                     Log.d(TAG, "Error in get auth token:"+e.getMessage());
+                    e.printStackTrace();
                     result = new Intent();
                     data.putString(KEY_ERROR_MESSAGE, "Error creating user account, please try again later");
                 }
- 
+
                 result.putExtras(data);
                 return result;
             }
@@ -283,6 +322,98 @@ catch(Exception e)
     public void onBackPressed() {
         setResult(RESULT_CANCELED);
         super.onBackPressed();
+    }
+
+    public String registerGCM() {
+
+        gcm = GoogleCloudMessaging.getInstance(this);
+        regId = getRegistrationId(context);
+
+        if (TextUtils.isEmpty(regId)) {
+
+            registerInBackground();
+
+            Log.d("RegisterActivity",
+                    "registerGCM - successfully registered with GCM server - regId: "
+                            + regId);
+        } else {
+            Toast.makeText(getApplicationContext(),
+                    "RegId already available. RegId: " + regId,
+                    Toast.LENGTH_LONG).show();
+        }
+        return regId;
+    }
+
+    private String getRegistrationId(Context context) {
+        final SharedPreferences prefs = getSharedPreferences(
+                Login.class.getSimpleName(), Context.MODE_PRIVATE);
+        String registrationId = prefs.getString(REG_ID, "");
+        if (registrationId.isEmpty()) {
+            Log.i(TAG, "Registration not found.");
+            return "";
+        }
+        int registeredVersion = prefs.getInt(APP_VERSION, Integer.MIN_VALUE);
+        int currentVersion = getAppVersion(context);
+        if (registeredVersion != currentVersion) {
+            Log.i(TAG, "App version changed.");
+            return "";
+        }
+        return registrationId;
+    }
+
+    private static int getAppVersion(Context context) {
+        try {
+            PackageInfo packageInfo = context.getPackageManager()
+                    .getPackageInfo(context.getPackageName(), 0);
+            return packageInfo.versionCode;
+        } catch (PackageManager.NameNotFoundException e) {
+            Log.d("RegisterActivity",
+                    "I never expected this! Going down, going down!" + e);
+            throw new RuntimeException(e);
+        }
+    }
+
+    private void registerInBackground() {
+       /* new AsyncTask<Void, Void, String>() {
+            @Override
+            protected String doInBackground(Void... params) {*/
+                String msg = "";
+                try {
+                    if (gcm == null) {
+                        gcm = GoogleCloudMessaging.getInstance(this);
+                    }
+                    regId = gcm.register(Config.GOOGLE_PROJECT_ID);
+                    Log.d("RegisterActivity", "registerInBackground - regId: "
+                            + regId);
+                    msg = "Device registered, registration ID=" + regId;
+
+                    storeRegistrationId(context, regId);
+                } catch (IOException ex) {
+                    msg = "Error :" + ex.getMessage();
+                    Log.d("RegisterActivity", "Error: " + msg);
+                }
+               /* Log.d("RegisterActivity", "AsyncTask completed: " + msg);
+                return msg;
+            }
+
+            @Override
+            protected void onPostExecute(String msg) {
+                Toast.makeText(getApplicationContext(),
+                        "Registered with GCM Server." + msg, Toast.LENGTH_LONG)
+                        .show();
+            }
+        }.execute(null, null, null);*/
+    }
+
+    private void storeRegistrationId(Context context, String regId) {
+        final SharedPreferences prefs = getSharedPreferences(
+                Login.class.getSimpleName(), Context.MODE_PRIVATE);
+        int appVersion = getAppVersion(context);
+        Log.i(TAG, "Saving regId on app version " + appVersion);
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putString(REG_ID, regId);
+        editor.putInt(APP_VERSION, appVersion);
+        editor.commit();
     }
 }
 

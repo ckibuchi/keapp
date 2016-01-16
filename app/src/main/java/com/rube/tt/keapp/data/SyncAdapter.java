@@ -22,6 +22,7 @@ import com.loopj.android.http.Base64;
 import com.rube.tt.keapp.db.DB;
 import com.rube.tt.keapp.db.DBProvider;
 import com.rube.tt.keapp.db.DbManager;
+import com.rube.tt.keapp.fragments.ContactFragment;
 import com.rube.tt.keapp.models.ContactModel;
 import com.rube.tt.keapp.utils.Constants;
 import com.rube.tt.keapp.utils.Utils;
@@ -30,6 +31,7 @@ import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.HttpClient;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.client.utils.URLEncodedUtils;
@@ -64,7 +66,7 @@ public class SyncAdapter extends AbstractThreadedSyncAdapter {
     private static String TAG = SyncAdapter.class.getSimpleName();
     ProgressDialog prgDialog;
     private final AccountManager mAccountManager;
-    private DbManager dbManager;
+    private static DbManager dbManager;
     private ContentResolver contentResolver;
     private final static String SERVER_ACCESS_URL = Constants.SERVER_URL;
 
@@ -405,7 +407,7 @@ public class SyncAdapter extends AbstractThreadedSyncAdapter {
         inputStream.close();
         return result;
     }
-    public static JSONObject Login(ArrayList<NameValuePair> params, String tableName) throws Exception {
+    public static JSONObject GET(ArrayList<NameValuePair> params, String tableName) throws Exception {
         // Create a new HttpClient and Post Header
         String path = "api/" + tableName;
         String vals= URLEncodedUtils.format(params,"utf-8");
@@ -458,17 +460,21 @@ public class SyncAdapter extends AbstractThreadedSyncAdapter {
 
 
     }
-    public static JSONObject POST(ArrayList<NameValuePair> params, String tableName) throws Exception {
+    public static JSONArray POST(ArrayList<NameValuePair> params, String thepath,String accept, String content_type) throws Exception {
         // Create a new HttpClient and Post Header
-        String path = "api/" + tableName;
+        String path = "" + thepath;
+
         URL url = new URL(SERVER_ACCESS_URL + path);
-        HttpClient httpClient = new DefaultHttpClient();
+       HttpClient httpClient = new DefaultHttpClient();
         HttpPost post = new HttpPost(SERVER_ACCESS_URL + path);
-        post.setHeader("content-type", "application/json");
-       // String authentication ="chris:chris";
-       // String encoding = Base64.encodeToString(authentication.getBytes(), Base64.NO_WRAP);
-        //post.setHeader("Authorization", "Basic " + encoding);
-        //Construimos el objeto cliente en formato JSON
+        Log.i(TAG,SERVER_ACCESS_URL + path);
+        if(content_type.trim().length()>0) {
+         post.setHeader("Content-Type",content_type);
+        }
+        if(accept.trim().length()>0)
+        {
+            post.setHeader("Accept", accept);
+        }
         JSONObject dato = new JSONObject();
 
 
@@ -479,51 +485,68 @@ public class SyncAdapter extends AbstractThreadedSyncAdapter {
                     dato.put(params.get(i).getName(), params.get(i).getValue());
                 }
             }
-                StringEntity entity = new StringEntity(dato.toString());
-                post.setEntity(entity);
+
+                post.setEntity(new UrlEncodedFormEntity(params));
 
                 HttpResponse resp = httpClient.execute(post);
-                String respStr = EntityUtils.toString(resp.getEntity());
+                String responseMessage = EntityUtils.toString(resp.getEntity());
+        Log.i(TAG,"responseMessage " +responseMessage);
+        String code=""+resp.getStatusLine().getStatusCode();
+        if(!code.contains("20"))
+        {
+            responseMessage="[{\"status\":\"UNABLE TO PROCESS\"}]";
+        }
+        JSONArray jsonObject = new JSONArray(responseMessage);
+        return jsonObject;
 
-      /*  String authentication ="admin:admin";
+    }
+    public static JSONArray POSTRAW(ArrayList<NameValuePair> params, String thepath,String accept, String content_type) throws Exception {
+        // Create a new HttpClient and Post Header
+        String path = "" + thepath;
+        Log.i(TAG,path);
+        URL url = new URL(SERVER_ACCESS_URL + path);
+        HttpClient httpClient = new DefaultHttpClient();
+        HttpPost post = new HttpPost(SERVER_ACCESS_URL + path);
 
-        String encoding = Base64.encodeToString(authentication.getBytes(), Base64.NO_WRAP);
-
-        HashMap<String, Object> responseMap;
-
-        HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-        conn.setRequestMethod("POST");
-        if(params.size()>0) {
-            for(int i=0;i<params.size();i++)
-            {
-                Log.i(params.get(i).getName(), params.get(i).getValue());
-                conn.addRequestProperty(params.get(i).getName(), params.get(i).getValue());
-            }
-           // conn.addRequestProperty("first_name", params.get(0).getValue());
-            //conn.addRequestProperty("username", params.get(0).getValue());
-            //conn.addRequestProperty("email", params.get(1).getValue());
-            //conn.addRequestProperty("password", params.get(2).getValue());
+        if(accept.trim().length()>0)
+        {
+            post.setHeader("Accept", accept);
+        } if(content_type.trim().length()>0)
+        {
+            post.setHeader("Content-Type", content_type);
         }
 
+        JSONObject dato = new JSONObject();
+               if(params.size()>0) {
+            for (int i = 0; i < params.size(); i++) {
+               // Log.i("PARAMEMTER "+params.get(i).getName(), params.get(i).getValue());
 
-        conn.setRequestProperty("Authorization", "Basic " + encoding);
-        conn.setDoOutput(false);
-        Log.d(TAG, "Connecting..");
-        conn.connect();
-        Log.d("CODE ", "" + conn.getResponseCode());
 
-        Log.d("RESP ", conn.getResponseMessage());
-        Log.d("data ", conn.getContent().toString());
-        String line;
-        String responseMessage = new String();
-        BufferedReader reader = new BufferedReader(new InputStreamReader(
-                conn.getInputStream()));
-        while ((line = reader.readLine()) != null) {
-            // Log.d(TAG, "Reading line by line: " + line);
-            responseMessage += line;
-        }*/
-                Log.i(TAG,respStr);
-        JSONObject jsonObject = new JSONObject(respStr);
+                dato.put(params.get(i).getName(), params.get(i).getValue());
+            }
+        }
+        Log.i(TAG, "Details for signup: " + dato.toString());
+        StringEntity entity = new StringEntity(dato.toString());
+
+
+        post.setEntity(entity);
+
+        HttpResponse resp = httpClient.execute(post);
+        String  responseMessage="[]";
+        Log.i(TAG,"Status CODE: "+resp.getStatusLine().getStatusCode());
+        String code=""+resp.getStatusLine().getStatusCode();
+        if(code.contains("20"))
+        {
+            responseMessage="[{\"status\":\"OK\"}]";
+        }
+       /* try {
+            responseMessage = EntityUtils.toString(resp.getEntity());
+
+        }
+        catch(Exception e)
+        {}*/
+        JSONArray jsonObject = new JSONArray(responseMessage);
+
         return jsonObject;
 
     }
@@ -540,27 +563,7 @@ public class SyncAdapter extends AbstractThreadedSyncAdapter {
             String value = jsonObject.getString(key);
             pairs.put(key, value);
         }
-       /* JSONObject myArray = new JSONObject(t);
-        for (Iterator<Entry<String, JsonNode>> iterator = myArray.fields(); iterator.hasNext();) {
-            Entry<String, JsonNode> item = iterator.next();
-            Integer idItem = Integer.parseInt(item.getKey());
-            // snip
-        }*/
-     /*   HashMap<String, String> map = new HashMap<String, String>();
-        JSONArray array = new JSONArray(t);
 
-        JSONObject jObject = new JSONObject(t);
-      //  Iterator<?> keys = jObject.keys();
-
-        while( keys.hasNext() ){
-            String key = (String)keys.next();
-            String value = jObject.getString(key);
-            map.put(key, value);
-
-        }
-
-        System.out.println("json : "+jObject);
-        System.out.println("map : " + map);*/
         return pairs;
     }
         public static HashMap<String, Object> postToServer(ArrayList<NameValuePair> params, String tableName) throws Exception {
@@ -743,12 +746,52 @@ public class SyncAdapter extends AbstractThreadedSyncAdapter {
         //create contact->profile->profile status
         //              ->status
 try {
+    int ismember=0;
     DBProvider dbProvider = new DBProvider(context);
     String rawSql = "Select * from " + DB.Profile.TABLE + " where " + DB.Profile.MSISDN + "='" + contactModel.getPhoneNumber() + "'";
     Cursor localContacts = dbProvider.rawQuery(DB.Contact.CONTENT_URI, rawSql, null);
+    try
+    {
+        ismember=1;
+       /* Log.d(TAG, "Phone " + contactModel.getPhoneNumber());
+        ArrayList<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
+        Log.i("start ",""+(contactModel.getPhoneNumber().trim().length()-9));
+        Log.i("end ", "" + contactModel.getPhoneNumber().trim().length());
+
+        nameValuePairs.add(new BasicNameValuePair("msisdn", contactModel.getPhoneNumber().trim().substring(contactModel.getPhoneNumber().trim().length() - 9, contactModel.getPhoneNumber().trim().length())));  //0727894083
+        JSONArray userdetails=POST(nameValuePairs, "Users/FromPhone", ACCEPT.JSON,CONTENT_TYPE.URLENCODED);
+        JSONObject userhere=userdetails.getJSONObject(0);
+        if(userhere.has("regId"))
+        {
+            ismember=1;
+        }
+        else
+            ismember=0;*/
+
+    }
+    catch(Exception e)
+    {}
     try {
         if (localContacts.getCount() > 0) {
             Log.d(TAG, "Skipping contact " + contactModel.getPhoneNumber() + " already synced in local db");
+            try {
+                ContentValues updatecontact = new ContentValues();
+
+
+                updatecontact.put(DB.Contact.IS_MEMBER, ismember);
+                Log.d(TAG, "Calling update into contact, id: " + contactModel.getId() + " ");
+              //  DB.update(DB.Contact.TABLE, updatecontact, "_id = ?", new String[]{""+contactModel.getId()});
+               // dbProvider.update(DB.Contact.CONTENT_URI,updatecontact,DB.Contact._ID+"=? ",new String[] {""+contactModel.getId()});
+               Log.d(TAG,""+dbProvider.updateContactAsMember(contactModel));
+
+
+            /*    int u=dbProvider.updateUserStatus(DB.Contact.TABLE
+                       , ismember,
+                       "" + contactModel.getId());
+                Log.d(" Update status ","  "+u);*/
+            }
+            catch(Exception e)
+            {e.printStackTrace();}
             return;
         }
     } catch (Exception ex) {
@@ -780,7 +823,7 @@ try {
     statusParams.put(DB.ProfileStatus.SERVER_ID, 0);
     statusParams.put(DB.ProfileStatus.MESSAGE, "keapp");
     statusParams.put(DB.ProfileStatus.PROFILE, profileId);
-    statusParams.put(DB.ProfileStatus.ACTIVE, 1);
+    statusParams.put(DB.ProfileStatus.ACTIVE, ismember);
 
     Log.d(TAG, "Calling insert into profile status");
     Uri pUri = dbProvider.insert(DB.ProfileStatus.CONTENT_URI, statusParams);
@@ -789,15 +832,17 @@ try {
 //Search from the service if a member with this phone number exists....
     //The logic goes here...
     ContentValues contactParams = new ContentValues();
+    Log.i("ISMEMBER ",""+ismember+" ");
 
-    contactParams.put(DB.Contact.IS_MEMBER, 1);
+
+    contactParams.put(DB.Contact.IS_MEMBER, ismember);
     contactParams.put(DB.Contact.SERVER_ID, 0);
     contactParams.put(DB.Contact.PROFILE, profileId);
     contactParams.put(DB.Contact.STATUS, profileStatusId);
     Log.d(TAG, "Calling insert into contact");
     Uri cUri = dbProvider.insert(DB.Contact.CONTENT_URI, contactParams);
     Log.d(TAG, "INSERT CONTACT " + cUri.toString());
-
+    ContactFragment.search(null);
 }
 catch(Exception e)
 {

@@ -16,13 +16,13 @@
 
 package com.rube.tt.keapp.utils.emojicons;
 
-import com.rube.tt.keapp.R;
-
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.text.SpannableStringBuilder;
 import android.util.AttributeSet;
 import android.widget.TextView;
+
+import com.rube.tt.keapp.R;
 
 /**
  * @author Hieu Rocker (rockerhieu@gmail.com).

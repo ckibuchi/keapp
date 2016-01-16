@@ -6,12 +6,14 @@ package com.rube.tt.keapp.auth;
 
 import android.util.Log;
 
+import com.rube.tt.keapp.data.ACCEPT;
 import com.rube.tt.keapp.data.SyncAdapter;
 import com.rube.tt.keapp.utils.Constants;
 import com.rube.tt.keapp.utils.HashGenerator;
 
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
@@ -27,11 +29,10 @@ public class KeappServerAuthenticate implements ServerAuthenticate{
     private final String SERVER_ACCESS_URL =  Constants.SERVER_URL;
 
     @Override
-    public String userSignUp(ArrayList<NameValuePair> nameValuePairs, String authType) throws Exception {
+    public String userSignUp(ArrayList<NameValuePair> nameValuePairs, String authType,String pass) throws Exception {
 
-
-        JSONObject response = SyncAdapter.POST(nameValuePairs, "user");
-Log.i("RESPONSE",response.toString());
+        JSONArray response = SyncAdapter.POSTRAW(nameValuePairs, "WebService/Users", ACCEPT.JSON, ACCEPT.JSON);
+        Log.i("RESPONSE",response.toString());
        /* int responseStatus = Integer.valueOf(response.get("responseStatus").toString());
 
         if (responseStatus != 201){
@@ -40,12 +41,13 @@ Log.i("RESPONSE",response.toString());
             return  null;
         }*/
 
+        JSONObject signupdetails=response.getJSONObject(0);
 
-        if((int)response.get("id")>0)
+        if(signupdetails.has("status"))
         {
-            Log.d(TAG, "Authentication Passsword "+response.getString("password"));
-            Log.d(TAG, "Received response " + response.toString());
-            return HashGenerator.generateMD5(response.getString("password"));
+          //  Log.d(TAG, "Authentication Passsword "+signupdetails.getString("password"));
+            Log.d(TAG, "Received response " + signupdetails.toString());
+            return HashGenerator.generateMD5(HashGenerator.generateSHA1(pass));
         }
         else
             return null;
@@ -59,23 +61,18 @@ Log.i("RESPONSE",response.toString());
 
         ArrayList<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
         nameValuePairs.add(new BasicNameValuePair("email", email));
-       // nameValuePairs.add(new BasicNameValuePair("password", pass));
+        nameValuePairs.add(new BasicNameValuePair("password", pass));
 
      //   HashMap<String, Object>[] response = SyncAdapter.readFromServer(null, "user", nameValuePairs);
-        JSONObject response =SyncAdapter.Login(nameValuePairs, "user");
-        Log.i("Count",response.getString("count"));
-        JSONObject logindetails=response.getJSONArray("results").getJSONObject(0);
+        JSONArray response =SyncAdapter.POST(nameValuePairs, "WebService/Users/login", ACCEPT.JSON,"");
 
-        if ((int)response.get("count") < 1){
-            //We never actually created this user
-            Log.d(TAG, "Authentication error .. returning null");
-            return  null;
-        }
-        if((int)response.get("count")>0)
-        {
+       JSONObject logindetails=response.getJSONObject(0);
+
+        if (logindetails.has("id")){
+
             Log.d(TAG, "Authentication Passsword "+logindetails.getString("password"));
             Log.d(TAG, "Received response "+logindetails.toString());
-            return HashGenerator.generateMD5(logindetails.getString("password"));
+            return logindetails.getString("msisdn");/*HashGenerator.generateMD5(logindetails.getString("password"));*/
         }
         else
             return null;
