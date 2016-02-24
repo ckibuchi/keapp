@@ -12,8 +12,9 @@
         android:layout_height="fill_parent"
         android:background="@android:color/transparent"
         android:layout_marginBottom="5dp"
-        android:orientation="horizontal">
-
+        android:orientation="horizontal"
+        android:id="@+id/storyTime">
+<!--
         <ImageView
             android:id="@+id/page_detail_profile_icon"
             android:layout_width="50dp"
@@ -24,6 +25,19 @@
             android:layout_marginTop="5dp"
             android:background="@drawable/image_curved_border"
             android:src="@drawable/default_profile_pic" />
+
+        -->
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/page_detail_profile_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="8dp"
+            android:src="@drawable/default_profile_pic"
+            android:background="@android:color/transparent"
+            android:textStyle="italic"
+            android:layout_marginRight="5dip"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"/>
 
         <LinearLayout
             android:orientation="vertical"
@@ -95,12 +109,13 @@
             android:background="@android:color/transparent"
             />
     </LinearLayout>
-
+<!--
     <LinearLayout
         android:layout_width="wrap_content"
         android:fillViewport="true"
+        android:visibility="invisible"
         android:background="@android:color/transparent"
-        android:layout_height="wrap_content">
+        android:layout_height="0dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -131,13 +146,15 @@
     </LinearLayout>
     <LinearLayout
         android:layout_width="fill_parent"
+        android:visibility="invisible"
         android:background="#eeeeee"
         android:layout_marginLeft="2dp"
         android:layout_marginRight="2dp"
         android:layout_height="1dp"></LinearLayout>
     <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_height="0dp"
+        android:visibility="invisible"
         android:orientation="horizontal"
         android:layout_weight="2"
         android:background="@android:color/transparent" >
@@ -231,7 +248,7 @@
 
     </LinearLayout>
 
-
+-->
 
 
 </LinearLayout>

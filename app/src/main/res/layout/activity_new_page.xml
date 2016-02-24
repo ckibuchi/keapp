@@ -29,11 +29,11 @@
             android:layout_gravity="right">
 
             <View
-            android:layout_width="1dp"
-            android:layout_marginRight="5dp"
-            android:layout_height="30dp"
-            android:layout_gravity="center_vertical"
-            android:background="#333333" />
+                android:layout_width="1dp"
+                android:layout_marginRight="5dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:background="#333333" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -45,9 +45,9 @@
                 android:background="@null"
                 android:textColor="#FFF"
                 android:text="SAVE"/>
-                />
+            />
 
-            <ImageView
+            <de.hdodenhof.circleimageview.CircleImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical|left"
@@ -59,13 +59,14 @@
                 android:src="@drawable/ic_action_view_as_list"
                 android:visibility="gone"
                 android:text=""/>
-             />
+            />
         </LinearLayout>
     </android.support.v7.widget.Toolbar>
 
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"
         android:scrollbars="none"
+        android:background="#ffffff"
         android:layout_height="fill_parent">
 
         <RelativeLayout
@@ -94,7 +95,7 @@
                     android:layout_marginRight="5dp"
                     android:layout_marginBottom="5dp"
                     android:gravity="right"
-                    android:text="Page Name"
+                    android:text=""
                     android:textStyle="bold"
                     android:textAllCaps="true"
                     android:layout_alignParentTop="true"
@@ -106,18 +107,19 @@
 
             </RelativeLayout>
 
-            <ImageView
-                android:id="@+id/page_profile_icon"
+            <de.hdodenhof.circleimageview.CircleImageView
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:scaleType="fitXY"
-                android:padding="8dp"
+                android:src="@drawable/pages_default_pic"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/page_profile_icon"
+                android:background="@color/transparent"
                 android:layout_marginRight="5dip"
                 android:layout_marginLeft="5dp"
-                android:adjustViewBounds="true"
-                android:background="@drawable/image_curved_border"
+                android:padding="8dp"
+
                 android:layout_marginTop="30dp"
-                android:src="@drawable/pages_default_pic" />
+                />
 
             <LinearLayout
                 android:layout_width="fill_parent"
@@ -179,7 +181,7 @@
                         android:popupBackground="@android:color/white"
                         android:layout_height="30dp"
                         android:id="@+id/page_category_text_spiner"
-                        android:hint="Enter Page Category"
+                        android:hint="Select Category"
                         android:visibility="visible"
                         android:layout_marginBottom="5dp"
                         android:textColor="@color/default_text_color"
@@ -188,9 +190,9 @@
                         android:background="@android:color/transparent"/>
 
 
-                    </LinearLayout>
-
                 </LinearLayout>
+
+            </LinearLayout>
 
 
 
@@ -241,11 +243,12 @@
                     android:gravity="center_vertical">
 
                     <EditText
-                        android:layout_width="wrap_content"
+                        android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:hint="Edit page name ..."
                         android:id="@+id/page_name_textedit"
                         android:layout_weight="0"
+                        android:maxLines="1"
                         android:textColor="@color/default_text_color"
                         android:textSize="18dp"
                         android:visibility="gone"
@@ -253,7 +256,7 @@
 
 
                     <EditText
-                        android:layout_width="wrap_content"
+                        android:layout_width="fill_parent"
                         android:layout_height="35dp"
                         android:id="@+id/page_name_text"
                         android:hint="Edit page name ..."
@@ -268,15 +271,15 @@
 
             <LinearLayout
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="fill_parent"
                 android:layout_below="@+id/layout_page_name"
                 android:id="@+id/layout_page_description"
-                android:layout_marginBottom="5dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:orientation="vertical"
                 android:gravity="center_vertical"
+                android:layout_gravity="fill_vertical"
                 android:background="@drawable/page_list_border">
 
                 <TextView
@@ -287,7 +290,7 @@
                     android:layout_marginTop="5dp"
                     android:layout_marginLeft="5dp"
                     android:id="@+id/page_detail_creator"
-                    android:text="Description"
+                    android:text="Story"
                     android:textColor="#004C66"
                     android:textSize="18dp"
                     android:background="@android:color/transparent"
@@ -295,6 +298,7 @@
 
                 <LinearLayout
                     android:layout_width="fill_parent"
+
                     android:background="#eeeeee"
                     android:layout_marginLeft="2dp"
                     android:layout_marginRight="2dp"
@@ -304,86 +308,90 @@
                 <EditText
                     android:layout_width="fill_parent"
                     android:id="@+id/new_page_description"
-                    android:layout_height="wrap_content"
-                    android:hint="Decription"
+                    android:layout_height="fill_parent"
+                    android:hint="Story"
                     android:gravity="top"
-                    android:lines="3"
+                    android:lines="5"
                     android:layout_weight="0"
                     android:singleLine="false"
                     android:layout_marginBottom="5dp"
                     android:layout_marginLeft="5dp"
                     android:textColor="@color/default_text_color"
                     android:textSize="18dp"
+                    android:layout_gravity="fill_vertical"
                     android:background="@android:color/transparent"/>
 
             </LinearLayout>
+            <!--
+                        <LinearLayout
 
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
-                android:layout_marginTop="10dp"
-                android:id="@+id/layout_meida"
-                android:layout_below="@+id/layout_page_description"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
-                android:orientation="vertical"
-                android:gravity="center_vertical"
-                android:background="@drawable/page_list_border">
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:visibility="invisible"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginTop="10dp"
+                            android:id="@+id/layout_meida"
+                            android:layout_below="@+id/layout_page_description"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:orientation="vertical"
+                            android:gravity="center_vertical"
+                            android:background="@drawable/page_list_border">
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:visibility="invisible"
+                                android:background="@android:color/transparent">
 
-                    android:background="@android:color/transparent">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="5dp"
+                                    android:paddingTop="0dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginLeft="5dp"
+                                    android:id="@+id/page_detail_media"
+                                    android:text="Media"
+                                    android:textColor="#004C66"
+                                    android:textSize="18dp"
+                                    android:gravity="center_vertical"
+                                    android:background="@android:color/transparent"
+                                    />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="5dp"
-                        android:paddingTop="0dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginLeft="5dp"
-                        android:id="@+id/page_detail_media"
-                        android:text="Media"
-                        android:textColor="#004C66"
-                        android:textSize="18dp"
-                        android:gravity="center_vertical"
-                        android:background="@android:color/transparent"
-                        />
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:layout_width="35dp"
+                                    android:layout_height="35dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:layout_alignParentRight="true"
+                                    android:padding="2dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginLeft="5dp"
+                                    android:id="@+id/page_upload_image"
+                                    android:text=""
+                                    android:textColor="#004C66"
+                                    android:textSize="18dp"
+                                    android:src="@drawable/ic_action_upload"
+                                    android:background="@drawable/border_rounded_dark"
+                                    />
 
-                    <ImageView
-                        android:layout_width="35dp"
-                        android:layout_height="35dp"
-                        android:layout_marginBottom="5dp"
-                        android:layout_alignParentRight="true"
-                        android:padding="2dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginLeft="5dp"
-                        android:id="@+id/page_upload_image"
-                        android:text=""
-                        android:textColor="#004C66"
-                        android:textSize="18dp"
-                        android:src="@drawable/ic_action_upload"
-                        android:background="@drawable/border_rounded_dark"
-                        />
-
-                </RelativeLayout>
+                            </RelativeLayout>
 
 
 
-                <org.lucasr.twowayview.TwoWayView
-                    android:orientation="horizontal"
-                    android:id="@+id/horizontalList"
-                    android:layout_width="match_parent"
-                    android:layout_height="fill_parent"
-                    android:drawSelectorOnTop="false"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginBottom="5dp"
-                    android:layout_marginTop="5dp"
-                    android:background="@android:color/transparent"
-                    android:layout_marginRight="5dp"/>
+                            <org.lucasr.twowayview.TwoWayView
+                                android:orientation="horizontal"
+                                android:id="@+id/horizontalList"
+                                android:layout_width="match_parent"
+                                android:layout_height="fill_parent"
+                                android:drawSelectorOnTop="false"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginTop="5dp"
+                                android:background="@android:color/transparent"
+                                android:layout_marginRight="5dp"/>
 
-            </LinearLayout>
+                        </LinearLayout>
+                        -->
         </RelativeLayout>
     </ScrollView>
 </LinearLayout>

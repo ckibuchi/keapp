@@ -25,7 +25,7 @@
             android:id="@+id/chat_content_container"
             android:orientation="vertical">
 
-            <com.rube.tt.keapp.utils.emojicons.EmojiconTextView
+            <TextView
                 android:id="@+id/txtMsg"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -64,7 +64,7 @@
                 android:layout_gravity="right|center_vertical"
                 android:visibility="visible"
                 android:background="@android:color/transparent"
-                android:src="@drawable/ic_action"/>
+                android:src="@drawable/ic_smiles_recent_active"/>
         </LinearLayout>
 
         </LinearLayout>

@@ -24,7 +24,7 @@
             android:background="@android:color/transparent"/>
 
 
-        <com.rube.tt.keapp.utils.emojicons.EmojiconEditText
+        <in.co.madhur.chatbubblesdemo.utils.emojicons.EmojiconEditText
             android:id="@+id/editEmojicon"
             android:hint="Write Messsage"
             android:layout_weight="17"

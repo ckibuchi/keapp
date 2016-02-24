@@ -22,7 +22,7 @@
             android:layout_marginTop="10dp"
             android:orientation="vertical">
 
-            <com.rube.tt.keapp.utils.emojicons.EmojiconTextView
+            <TextView
             android:id="@+id/txtMsg"
             android:text="I love emojicon "
             android:layout_width="wrap_content"

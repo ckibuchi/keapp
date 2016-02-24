@@ -50,7 +50,20 @@ android:orientation="horizontal">
             android:layout_marginLeft="5dp"
 
             />
+        <TextView
+            android:id="@+id/by"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="chris"
+            android:textColor="#606366"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:background="@android:color/transparent"
+            android:layout_marginBottom="2dp"
+            android:layout_marginLeft="5dp"
 
+            />
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"

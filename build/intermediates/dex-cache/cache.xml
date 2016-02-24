@@ -2,53 +2,18 @@
 <items version="2" >
 
     <item
-        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/8.4.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="1c9f35e952b212c843f7bd2c7eec8e82ad95602e">
-        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/classes-a1b1d501664218fd74130df07cef4ac0a5246bdb.jar" />
-    </item>
-    <item
-        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/com.astuetz/pagerslidingtabstrip/1.0.1/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="7912610ed96381c25c36d986eba422731b9641b6">
-        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/classes-1a70ef44130cf4ab79c540448c51e1abca771fc2.jar" />
-    </item>
-    <item
-        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/libs/universal-image-loader-1.9.3.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="a85588bec3e2c4584d593d3f15df1677321bca72">
-        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/universal-image-loader-1.9.3-edc5ab4d982df5db1172e7c7074420f345b32d25.jar" />
-    </item>
-    <item
-        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/8.4.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="b5e7892fb0708e792e0e933c4c0a0ca0ac7831fb">
-        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/classes-2c2a29d69d21e65593218522bf977e6fa8bf7e01.jar" />
-    </item>
-    <item
-        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/com.rockerhieu.emojicon/library/1.1-SNAPSHOT/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="8e27535cdfade602600af3228982208bed98d6b6">
-        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/classes-606e10ed8100716d31d0dc21774fe2f5cdd4c7e2.jar" />
-    </item>
-    <item
-        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/libs/universal-image-loader-1.9.3.jar"
+        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/de.hdodenhof/circleimageview/1.2.1/jars/classes.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="a85588bec3e2c4584d593d3f15df1677321bca72">
-        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/universal-image-loader-1.9.3-edc5ab4d982df5db1172e7c7074420f345b32d25.jar" />
+        sha1="4b868b833b0887aa48c4e581558eef4f1196f6a2">
+        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/classes-14121f3b9993408f06e6763c94a252c7c78bcaee.jar" />
     </item>
     <item
-        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/8.4.0/jars/classes.jar"
+        jar="/home/ckibuchi/Downloads/android-sdk-linux/extras/android/m2repository/com/android/support/support-annotations/23.1.0/support-annotations-23.1.0.jar"
         jumboMode="false"
         revision="23.0.2"
-        sha1="f2df436a8f02ce7e4d7d209671fc45f97c470f0e">
-        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/classes-3aabd44c0ddf3de175acce2956c3bd6f62780b7e.jar" />
+        sha1="92e3fc113ec3ee36b64603a38857b95700025633">
+        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/support-annotations-23.1.0-35d0ce565f536877ce70db3de7285566b8b15741.jar" />
     </item>
     <item
         jar="/home/ckibuchi/Downloads/android-sdk-linux/extras/android/m2repository/com/android/support/support-annotations/23.1.0/support-annotations-23.1.0.jar"
@@ -58,74 +23,39 @@
         <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/support-annotations-23.1.0-35d0ce565f536877ce70db3de7285566b8b15741.jar" />
     </item>
     <item
-        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.4.0/jars/classes.jar"
+        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-drive/8.4.0/jars/classes.jar"
         jumboMode="false"
         revision="23.0.2"
-        sha1="8e673cdfadd8f2d98fdb2fda2285c30f6e449782">
-        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/classes-79fc426ca86539f24cdafbd063a0b8df6ea2bb26.jar" />
+        sha1="b36f30ac5ee5d5214f4b1e2ac49f11889d58e71a">
+        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/classes-5a95bfd48901b1a07228ea49a1931d9b849db99e.jar" />
     </item>
     <item
-        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/jars/libs/internal_impl-23.1.0.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="8716243bf04bae8d6c9ca94d27b9a9be7236f0a3">
-        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/internal_impl-23.1.0-42068f152e85c65b16f7cc5989a860aea6a98791.jar" />
-    </item>
-    <item
-        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.1.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="3f151e49c316a5ab2c065969a3b3b55ef9b393fc">
-        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/classes-323dec437fed643952e03e8597ef81126a53fb4a.jar" />
-    </item>
-    <item
-        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.4.0/jars/classes.jar"
+        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-vision/8.4.0/jars/classes.jar"
         jumboMode="false"
         revision="23.0.2"
-        sha1="a8412b654dab86d57bf90683367488211c8a81f1">
-        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/classes-8c213b503581d06e86d6cf9ca57d700dfeff06fb.jar" />
+        sha1="dfecc4d835cdabcdecf7e95f0d20a3ef1e9d8ef4">
+        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/classes-466b24c624bb94c08e1be51519bd58c0d428c7e2.jar" />
     </item>
     <item
-        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/org.lucasr.twowayview/twowayview/0.1.4/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="1a2a997b75e4c94dac7051557be6b95a06566291">
-        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/classes-3481b48837daf219eff037514f906ce3f771a9fe.jar" />
-    </item>
-    <item
-        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/8.4.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="551e78f21acf69ebfb489c0e79647824c838013e">
-        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/classes-abc04c5098e0c72fd86547befb5fa3cd49afb418.jar" />
-    </item>
-    <item
-        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/com.rockerhieu.emojicon/library/1.1-SNAPSHOT/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="8e27535cdfade602600af3228982208bed98d6b6">
-        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/classes-606e10ed8100716d31d0dc21774fe2f5cdd4c7e2.jar" />
-    </item>
-    <item
-        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/libs/android-async-http-1.4.8.jar"
+        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/de.hdodenhof/circleimageview/1.2.1/jars/classes.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="77bbfe240e437ecb396d982afa0d3bd4f9090ba7">
-        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/android-async-http-1.4.8-4e3b823f4b6c3e552f9a91cfb11663439364f713.jar" />
+        sha1="4b868b833b0887aa48c4e581558eef4f1196f6a2">
+        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/classes-14121f3b9993408f06e6763c94a252c7c78bcaee.jar" />
     </item>
     <item
-        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/jars/classes.jar"
+        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-games/8.4.0/jars/classes.jar"
         jumboMode="false"
         revision="23.0.2"
-        sha1="ddde541c289c8b816a8f8fd6c325d80788c522a6">
-        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/classes-f92cd9ac135c249b539c5940b114afc33bdf5be8.jar" />
+        sha1="3a364cc6b698d1b3b2d284f64618daaa7fe77ddf">
+        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/classes-6121472b6d999f4aab845974aecef78a40ebdc63.jar" />
     </item>
     <item
-        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/org.lucasr.twowayview/twowayview/0.1.4/jars/classes.jar"
+        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/8.4.0/jars/classes.jar"
         jumboMode="false"
-        revision="22.0.1"
-        sha1="1a2a997b75e4c94dac7051557be6b95a06566291">
-        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/classes-3481b48837daf219eff037514f906ce3f771a9fe.jar" />
+        revision="23.0.2"
+        sha1="04de44f90606c77f3b28cf44861f306290505aac">
+        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/classes-c30759c882ece612de476332bd46b564827d2c58.jar" />
     </item>
     <item
         jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appinvite/8.4.0/jars/classes.jar"
@@ -135,11 +65,165 @@
         <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/classes-f46d4d2eca4d54c8c318b5a5160544b16a8f60b0.jar" />
     </item>
     <item
+        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-fitness/8.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="c54246475c1bb64ac6857d1320364bfbfeda2c46">
+        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/classes-eaa4cc684de08179e27c37838b9669fe20ba6592.jar" />
+    </item>
+    <item
+        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-safetynet/8.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="0194a7409c40de94fb539d4ad9928ec5d47afeb7">
+        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/classes-490a1cd473bd2bc9cf530ef993dc0c419bb03687.jar" />
+    </item>
+    <item
+        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/libs/universal-image-loader-1.9.3.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="a85588bec3e2c4584d593d3f15df1677321bca72">
+        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/universal-image-loader-1.9.3-edc5ab4d982df5db1172e7c7074420f345b32d25.jar" />
+    </item>
+    <item
+        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="3f151e49c316a5ab2c065969a3b3b55ef9b393fc">
+        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/classes-323dec437fed643952e03e8597ef81126a53fb4a.jar" />
+    </item>
+    <item
+        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="ddde541c289c8b816a8f8fd6c325d80788c522a6">
+        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/classes-f92cd9ac135c249b539c5940b114afc33bdf5be8.jar" />
+    </item>
+    <item
+        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/de.hdodenhof/circleimageview/1.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="4b868b833b0887aa48c4e581558eef4f1196f6a2">
+        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/classes-14121f3b9993408f06e6763c94a252c7c78bcaee.jar" />
+    </item>
+    <item
         jar="/home/ckibuchi/Downloads/android-sdk-linux/extras/android/m2repository/com/android/support/support-annotations/23.1.0/support-annotations-23.1.0.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="92e3fc113ec3ee36b64603a38857b95700025633">
         <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/support-annotations-23.1.0-35d0ce565f536877ce70db3de7285566b8b15741.jar" />
+    </item>
+    <item
+        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/libs/universal-image-loader-1.9.3.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="a85588bec3e2c4584d593d3f15df1677321bca72">
+        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/universal-image-loader-1.9.3-edc5ab4d982df5db1172e7c7074420f345b32d25.jar" />
+    </item>
+    <item
+        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/libs/gson-2.2.2.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="53bfcd3c8e310d1493b2691484525ed90b04e236">
+        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/gson-2.2.2-32039c2a4c652580f6c60d658f61575103eb7bd9.jar" />
+    </item>
+    <item
+        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/libs/android-async-http-1.4.8.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="77bbfe240e437ecb396d982afa0d3bd4f9090ba7">
+        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/android-async-http-1.4.8-4e3b823f4b6c3e552f9a91cfb11663439364f713.jar" />
+    </item>
+    <item
+        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="ddde541c289c8b816a8f8fd6c325d80788c522a6">
+        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/classes-f92cd9ac135c249b539c5940b114afc33bdf5be8.jar" />
+    </item>
+    <item
+        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/jars/libs/internal_impl-23.1.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="8716243bf04bae8d6c9ca94d27b9a9be7236f0a3">
+        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/internal_impl-23.1.0-42068f152e85c65b16f7cc5989a860aea6a98791.jar" />
+    </item>
+    <item
+        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/8.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="b5e7892fb0708e792e0e933c4c0a0ca0ac7831fb">
+        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/classes-2c2a29d69d21e65593218522bf977e6fa8bf7e01.jar" />
+    </item>
+    <item
+        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/jars/libs/internal_impl-23.0.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="03d38bb042efe3e5ce27ba66b729a9523c36d8fe">
+        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/internal_impl-23.0.0-243ca85bcc4cc6bc449f7169303599781c9fc06d.jar" />
+    </item>
+    <item
+        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/8.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="966e5771a5a2ebfb31bf00d7cd6cd2546d245517">
+        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/classes-d1597341d038b701e176e7b62040b1a530a58813.jar" />
+    </item>
+    <item
+        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/com.astuetz/pagerslidingtabstrip/1.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="7912610ed96381c25c36d986eba422731b9641b6">
+        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/classes-1a70ef44130cf4ab79c540448c51e1abca771fc2.jar" />
+    </item>
+    <item
+        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/8.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="2d7fe76982677315c4dc4edfb459c8ca718a9d4c">
+        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/classes-9626dff62e62017d904cd59b2dac61d0e6dad639.jar" />
+    </item>
+    <item
+        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/jars/libs/internal_impl-23.1.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="8716243bf04bae8d6c9ca94d27b9a9be7236f0a3">
+        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/internal_impl-23.1.0-42068f152e85c65b16f7cc5989a860aea6a98791.jar" />
+    </item>
+    <item
+        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/com.astuetz/pagerslidingtabstrip/1.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="7912610ed96381c25c36d986eba422731b9641b6">
+        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/classes-1a70ef44130cf4ab79c540448c51e1abca771fc2.jar" />
+    </item>
+    <item
+        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/8.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="65d086ee9daaf87b5af62ad24471edafa433354c">
+        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/classes-342e56289bb5ae232c6bf3585f9f956c0398d55c.jar" />
+    </item>
+    <item
+        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="a8412b654dab86d57bf90683367488211c8a81f1">
+        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/classes-8c213b503581d06e86d6cf9ca57d700dfeff06fb.jar" />
+    </item>
+    <item
+        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="3f151e49c316a5ab2c065969a3b3b55ef9b393fc">
+        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/classes-323dec437fed643952e03e8597ef81126a53fb4a.jar" />
+    </item>
+    <item
+        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/jars/libs/internal_impl-23.1.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="8716243bf04bae8d6c9ca94d27b9a9be7236f0a3">
+        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/internal_impl-23.1.0-42068f152e85c65b16f7cc5989a860aea6a98791.jar" />
     </item>
     <item
         jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/8.4.0/jars/classes.jar"
@@ -149,25 +233,95 @@
         <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/classes-f19e7349a26a21fe8529b0984f032048d6e76a3c.jar" />
     </item>
     <item
-        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/8.4.0/jars/classes.jar"
+        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/libs/android-async-http-1.4.8.jar"
         jumboMode="false"
-        revision="23.0.2"
-        sha1="1a78298e7724d5440d210bcb946b3493250d354d">
-        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/classes-106cb435a91b3561801bd86302a6818b67c189bd.jar" />
+        revision="22.0.1"
+        sha1="77bbfe240e437ecb396d982afa0d3bd4f9090ba7">
+        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/android-async-http-1.4.8-4e3b823f4b6c3e552f9a91cfb11663439364f713.jar" />
     </item>
     <item
-        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-measurement/8.4.0/jars/classes.jar"
+        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/8.4.0/jars/classes.jar"
         jumboMode="false"
         revision="23.0.2"
-        sha1="613298b7aa012f121ce542881c0a599ebd8078f2">
-        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/classes-ef8ee713d06555a6070e9c929147b61a26eacb32.jar" />
+        sha1="1c9f35e952b212c843f7bd2c7eec8e82ad95602e">
+        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/classes-a1b1d501664218fd74130df07cef4ac0a5246bdb.jar" />
+    </item>
+    <item
+        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="d358b3dd49a7c67844622dcbc9cf4339e13952ce">
+        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/classes-4e2fa9fcb7ff2adccb8fab8315b754d6ba41eef9.jar" />
     </item>
     <item
         jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/libs/universal-image-loader-1.9.3.jar"
         jumboMode="false"
-        revision="23.0.2"
+        revision="22.0.1"
         sha1="a85588bec3e2c4584d593d3f15df1677321bca72">
         <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/universal-image-loader-1.9.3-edc5ab4d982df5db1172e7c7074420f345b32d25.jar" />
+    </item>
+    <item
+        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="3f151e49c316a5ab2c065969a3b3b55ef9b393fc">
+        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/classes-323dec437fed643952e03e8597ef81126a53fb4a.jar" />
+    </item>
+    <item
+        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/com.astuetz/pagerslidingtabstrip/1.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="7912610ed96381c25c36d986eba422731b9641b6">
+        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/classes-1a70ef44130cf4ab79c540448c51e1abca771fc2.jar" />
+    </item>
+    <item
+        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/libs/gson-2.2.2.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="53bfcd3c8e310d1493b2691484525ed90b04e236">
+        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/gson-2.2.2-32039c2a4c652580f6c60d658f61575103eb7bd9.jar" />
+    </item>
+    <item
+        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="57ae0d750ff83f0c738d21720224ac7ea866a094">
+        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/classes-055984c80e5cda96587339606a0eedf1f380d640.jar" />
+    </item>
+    <item
+        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="ddde541c289c8b816a8f8fd6c325d80788c522a6">
+        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/classes-f92cd9ac135c249b539c5940b114afc33bdf5be8.jar" />
+    </item>
+    <item
+        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/8.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="f2df436a8f02ce7e4d7d209671fc45f97c470f0e">
+        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/classes-3aabd44c0ddf3de175acce2956c3bd6f62780b7e.jar" />
+    </item>
+    <item
+        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/libs/android-async-http-1.4.8.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="77bbfe240e437ecb396d982afa0d3bd4f9090ba7">
+        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/android-async-http-1.4.8-4e3b823f4b6c3e552f9a91cfb11663439364f713.jar" />
+    </item>
+    <item
+        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/8.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="b82b8e847173c28efffcd291b2a0b1ae9ad17fa4">
+        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/classes-d2fff6867e532b61989a9e18ba14c9302c88312f.jar" />
+    </item>
+    <item
+        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="8e673cdfadd8f2d98fdb2fda2285c30f6e449782">
+        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/classes-79fc426ca86539f24cdafbd063a0b8df6ea2bb26.jar" />
     </item>
     <item
         jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-panorama/8.4.0/jars/classes.jar"
@@ -184,95 +338,25 @@
         <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/gson-2.2.2-32039c2a4c652580f6c60d658f61575103eb7bd9.jar" />
     </item>
     <item
-        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/com.astuetz/pagerslidingtabstrip/1.0.1/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="7912610ed96381c25c36d986eba422731b9641b6">
-        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/classes-1a70ef44130cf4ab79c540448c51e1abca771fc2.jar" />
-    </item>
-    <item
-        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="ddde541c289c8b816a8f8fd6c325d80788c522a6">
-        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/classes-f92cd9ac135c249b539c5940b114afc33bdf5be8.jar" />
-    </item>
-    <item
-        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/org.lucasr.twowayview/twowayview/0.1.4/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="1a2a997b75e4c94dac7051557be6b95a06566291">
-        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/classes-3481b48837daf219eff037514f906ce3f771a9fe.jar" />
-    </item>
-    <item
-        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/jars/classes.jar"
+        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-nearby/8.4.0/jars/classes.jar"
         jumboMode="false"
         revision="23.0.2"
-        sha1="d358b3dd49a7c67844622dcbc9cf4339e13952ce">
-        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/classes-4e2fa9fcb7ff2adccb8fab8315b754d6ba41eef9.jar" />
+        sha1="9cad249cf62751a323d9af568caf12284b7d6062">
+        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/classes-250b0918afd8af6c70de3abd315048ee4834f148.jar" />
     </item>
     <item
-        jar="/home/ckibuchi/Downloads/android-sdk-linux/extras/android/m2repository/com/android/support/support-annotations/23.1.0/support-annotations-23.1.0.jar"
+        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/8.4.0/jars/classes.jar"
         jumboMode="false"
         revision="23.0.2"
-        sha1="92e3fc113ec3ee36b64603a38857b95700025633">
-        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/support-annotations-23.1.0-35d0ce565f536877ce70db3de7285566b8b15741.jar" />
+        sha1="551e78f21acf69ebfb489c0e79647824c838013e">
+        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/classes-abc04c5098e0c72fd86547befb5fa3cd49afb418.jar" />
     </item>
     <item
-        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/8.4.0/jars/classes.jar"
+        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/8.4.0/jars/classes.jar"
         jumboMode="false"
         revision="23.0.2"
-        sha1="2d7fe76982677315c4dc4edfb459c8ca718a9d4c">
-        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/classes-9626dff62e62017d904cd59b2dac61d0e6dad639.jar" />
-    </item>
-    <item
-        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/libs/gson-2.2.2.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="53bfcd3c8e310d1493b2691484525ed90b04e236">
-        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/gson-2.2.2-32039c2a4c652580f6c60d658f61575103eb7bd9.jar" />
-    </item>
-    <item
-        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-vision/8.4.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="dfecc4d835cdabcdecf7e95f0d20a3ef1e9d8ef4">
-        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/classes-466b24c624bb94c08e1be51519bd58c0d428c7e2.jar" />
-    </item>
-    <item
-        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/jars/libs/internal_impl-23.1.0.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="8716243bf04bae8d6c9ca94d27b9a9be7236f0a3">
-        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/internal_impl-23.1.0-42068f152e85c65b16f7cc5989a860aea6a98791.jar" />
-    </item>
-    <item
-        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/de.hdodenhof/circleimageview/1.2.1/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="4b868b833b0887aa48c4e581558eef4f1196f6a2">
-        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/classes-14121f3b9993408f06e6763c94a252c7c78bcaee.jar" />
-    </item>
-    <item
-        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/jars/libs/internal_impl-23.0.0.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="03d38bb042efe3e5ce27ba66b729a9523c36d8fe">
-        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/internal_impl-23.0.0-243ca85bcc4cc6bc449f7169303599781c9fc06d.jar" />
-    </item>
-    <item
-        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/com.astuetz/pagerslidingtabstrip/1.0.1/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="7912610ed96381c25c36d986eba422731b9641b6">
-        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/classes-1a70ef44130cf4ab79c540448c51e1abca771fc2.jar" />
-    </item>
-    <item
-        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-drive/8.4.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="b36f30ac5ee5d5214f4b1e2ac49f11889d58e71a">
-        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/classes-5a95bfd48901b1a07228ea49a1931d9b849db99e.jar" />
+        sha1="1a78298e7724d5440d210bcb946b3493250d354d">
+        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/classes-106cb435a91b3561801bd86302a6818b67c189bd.jar" />
     </item>
     <item
         jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/jars/classes.jar"
@@ -282,137 +366,11 @@
         <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/classes-eeb121981f7ede90d245aba8ef6f01cb37758734.jar" />
     </item>
     <item
-        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
+        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-measurement/8.4.0/jars/classes.jar"
         jumboMode="false"
         revision="23.0.2"
-        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
-        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/classes-be82e021deb2ad5e205d16a482e16fd91ab25b3e.jar" />
-    </item>
-    <item
-        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-safetynet/8.4.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="0194a7409c40de94fb539d4ad9928ec5d47afeb7">
-        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/classes-490a1cd473bd2bc9cf530ef993dc0c419bb03687.jar" />
-    </item>
-    <item
-        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="ddde541c289c8b816a8f8fd6c325d80788c522a6">
-        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/classes-f92cd9ac135c249b539c5940b114afc33bdf5be8.jar" />
-    </item>
-    <item
-        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/libs/android-async-http-1.4.8.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="77bbfe240e437ecb396d982afa0d3bd4f9090ba7">
-        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/android-async-http-1.4.8-4e3b823f4b6c3e552f9a91cfb11663439364f713.jar" />
-    </item>
-    <item
-        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/de.hdodenhof/circleimageview/1.2.1/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="4b868b833b0887aa48c4e581558eef4f1196f6a2">
-        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/classes-14121f3b9993408f06e6763c94a252c7c78bcaee.jar" />
-    </item>
-    <item
-        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/8.4.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="b82b8e847173c28efffcd291b2a0b1ae9ad17fa4">
-        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/classes-d2fff6867e532b61989a9e18ba14c9302c88312f.jar" />
-    </item>
-    <item
-        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-nearby/8.4.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="9cad249cf62751a323d9af568caf12284b7d6062">
-        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/classes-250b0918afd8af6c70de3abd315048ee4834f148.jar" />
-    </item>
-    <item
-        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/8.4.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="04de44f90606c77f3b28cf44861f306290505aac">
-        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/classes-c30759c882ece612de476332bd46b564827d2c58.jar" />
-    </item>
-    <item
-        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/libs/gson-2.2.2.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="53bfcd3c8e310d1493b2691484525ed90b04e236">
-        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/gson-2.2.2-32039c2a4c652580f6c60d658f61575103eb7bd9.jar" />
-    </item>
-    <item
-        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/8.4.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="966e5771a5a2ebfb31bf00d7cd6cd2546d245517">
-        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/classes-d1597341d038b701e176e7b62040b1a530a58813.jar" />
-    </item>
-    <item
-        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.1.0/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="3f151e49c316a5ab2c065969a3b3b55ef9b393fc">
-        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/classes-323dec437fed643952e03e8597ef81126a53fb4a.jar" />
-    </item>
-    <item
-        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-fitness/8.4.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="c54246475c1bb64ac6857d1320364bfbfeda2c46">
-        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/classes-eaa4cc684de08179e27c37838b9669fe20ba6592.jar" />
-    </item>
-    <item
-        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.1.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="3f151e49c316a5ab2c065969a3b3b55ef9b393fc">
-        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/classes-323dec437fed643952e03e8597ef81126a53fb4a.jar" />
-    </item>
-    <item
-        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-games/8.4.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="3a364cc6b698d1b3b2d284f64618daaa7fe77ddf">
-        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/classes-6121472b6d999f4aab845974aecef78a40ebdc63.jar" />
-    </item>
-    <item
-        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/de.hdodenhof/circleimageview/1.2.1/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="4b868b833b0887aa48c4e581558eef4f1196f6a2">
-        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/classes-14121f3b9993408f06e6763c94a252c7c78bcaee.jar" />
-    </item>
-    <item
-        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/com.rockerhieu.emojicon/library/1.1-SNAPSHOT/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="8e27535cdfade602600af3228982208bed98d6b6">
-        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/classes-606e10ed8100716d31d0dc21774fe2f5cdd4c7e2.jar" />
-    </item>
-    <item
-        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/8.4.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="65d086ee9daaf87b5af62ad24471edafa433354c">
-        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/classes-342e56289bb5ae232c6bf3585f9f956c0398d55c.jar" />
-    </item>
-    <item
-        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/libs/android-async-http-1.4.8.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="77bbfe240e437ecb396d982afa0d3bd4f9090ba7">
-        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/android-async-http-1.4.8-4e3b823f4b6c3e552f9a91cfb11663439364f713.jar" />
-    </item>
-    <item
-        jar="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/jars/libs/internal_impl-23.1.0.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="8716243bf04bae8d6c9ca94d27b9a9be7236f0a3">
-        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/internal_impl-23.1.0-42068f152e85c65b16f7cc5989a860aea6a98791.jar" />
+        sha1="613298b7aa012f121ce542881c0a599ebd8078f2">
+        <dex dex="/home/ckibuchi/Documents/code/apps/keapp_git/keapp/app/build/intermediates/pre-dexed/debug/classes-ef8ee713d06555a6070e9c929147b61a26eacb32.jar" />
     </item>
 
 </items>

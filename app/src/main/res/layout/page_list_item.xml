@@ -88,7 +88,8 @@
             android:layout_weight="1"
             android:background="@android:color/transparent"
             android:orientation="horizontal"
-            android:gravity="center">
+            android:gravity="center"
+            android:id="@+id/likearea">
             <ImageView
                 android:layout_width="35dp"
                 android:layout_height="35dp"
@@ -96,6 +97,7 @@
                 android:layout_marginRight="5dp"
                 android:src="@drawable/ic_action_like"/>
             <TextView
+                android:id="@+id/liked"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"

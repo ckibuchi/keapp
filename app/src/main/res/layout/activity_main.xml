@@ -11,7 +11,8 @@
         layout="@layout/chat_tool_bar"
 
         />
-<com.rube.tt.keapp.widgets.SizeNotifierRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<in.co.madhur.chatbubblesdemo.widgets.SizeNotifierRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -31,6 +32,7 @@
         android:divider="@drawable/chat_divider"
         android:layout_width="match_parent"
         android:scrollbarStyle="outsideOverlay"
+        android:paddingBottom="2dp"
         android:layout_above="@+id/bottomlayout"
         android:layout_height="match_parent"></ListView>
 
@@ -45,7 +47,8 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:background="@android:color/white"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:id="@+id/chattext">
 
             <ImageView android:src="@drawable/ic_msg_panel_smiles" android:background="@android:color/white" android:layout_alignParentLeft="true" android:layout_alignParentStart="true" android:layout_marginLeft="8dp" android:layout_marginRight="8dp"
                 android:layout_width="wrap_content" android:id="@+id/emojiButton" android:layout_alignBottom="@+id/chat_edit_text1" android:layout_marginBottom="8dp"
@@ -90,5 +93,7 @@
 
     </LinearLayout>
 
-</com.rube.tt.keapp.widgets.SizeNotifierRelativeLayout>
+</in.co.madhur.chatbubblesdemo.widgets.SizeNotifierRelativeLayout>
+
     </LinearLayout>
+

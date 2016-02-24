@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <sync-adapter xmlns:android="http://schemas.android.com/apk/res/android"
-    android:contentAuthority="com.rube.tt.keapp"
-    android:accountType="com.rube.tt.keapp"
+    android:contentAuthority="in.co.madhur.chatbubblesdemo"
+    android:accountType="in.co.madhur.chatbubblesdemo"
     android:userVisible="true"
     android:allowParallelSyncs="false"
     android:isAlwaysSyncable="true"

@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.rube.tt.keapp" >
-    <uses-permission android:name="android.permission.SEND_SMS" />
-    <uses-permission android:name="android.permission.READ_SMS"/>
-    <uses-permission android:name="android.permission.WRITE_SMS"/>
-    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"></uses-permission>
+    package="in.co.madhur.chatbubblesdemo" >
 
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <!-- Include next permission if you want to allow UIL to cache images on SD card -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
-    <!--- record audio alongside video -->
+    <!-- - record audio alongside video -->
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
 
@@ -21,39 +20,37 @@
 
     <!-- include permissions for chat part -->
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-    <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <!-- Access to network and network info -->
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.INTERNET" />
 
-    <!--GCM  -->
+    <!-- GCM -->
     <permission
-        android:name="com.rube.tt.keapp.permission.C2D_MESSAGE"
+        android:name=".permission.C2D_MESSAGE"
         android:protectionLevel="signature" />
 
-    <uses-permission android:name="com.rube.tt.keapp.permission.C2D_MESSAGE" />
-
+    <uses-permission android:name=".permission.C2D_MESSAGE" />
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.VIBRATE" />
-    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
 
-
     <application
+        android:name=".App"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/KeappActionBar"
+        tools:replace="android:icon,android:theme" >
+
+        <!--
+        android:theme="@style/KeappActionBar"
         tools:replace="android:icon,android:theme"
-        >
-        <!--  android:theme="@style/KeappActionBar"
-        tools:replace="android:icon,android:theme" -->
+        -->
         <activity
             android:name=".SplashScreen"
-            android:label="@string/app_name">
+            android:label="@string/app_name" >
+
             <!--
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -61,33 +58,69 @@
             </intent-filter>
             -->
         </activity>
-        <activity android:name=".KEApp" android:label="@string/app_name"  android:uiOptions="splitActionBarWhenNarrow">
-
+        <activity
+            android:name=".KEApp"
+            android:label="@string/app_name"
+            android:uiOptions="splitActionBarWhenNarrow" >
         </activity>
-        <activity android:name="com.rube.tt.keapp.Login" android:label="@string/app_name" >
+        <activity
+            android:name=".Login"
+            android:label="@string/app_name" >
             <intent-filter>
-                <action android:name="android.intent.action.VIEW"></action>
-                <category android:name="android.intent.category.DEFAULT"></category>
-                <category android:name="android.intent.category.BROWSABLE"></category>
+                <action android:name="android.intent.action.VIEW" />
 
-                <data android:host="www.keapp.com" android:pathPrefix="/launch/"
-                    android:path="/launch/.*" android:scheme="http"></data>
-                <data android:host="keapp.com" android:pathPrefix="/launch/"
-                    android:path="/launch/.*" android:scheme="http"></data>
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="www.keapp.com"
+                    android:path="/launch/.*"
+                    android:pathPrefix="/launch/"
+                    android:scheme="http" />
+                <data
+                    android:host="keapp.com"
+                    android:path="/launch/.*"
+                    android:pathPrefix="/launch/"
+                    android:scheme="http" />
+
             </intent-filter>
         </activity>
-        <activity android:name=".Signup" android:label="@string/title_signup_page" />
-        <activity android:name=".FinishSignup" android:label="@string/title_finish_signup" />
-        <activity android:name=".PageDetail" android:label="@string/title_page_detail" />
-        <activity android:name=".ChatView" android:label="@string/chat_page_detail" />
-        <activity android:name=".BroadCast" android:label="@string/broadcast_header" />
-        <activity android:name=".Group" android:label="@string/group_header" />
-        <activity android:name=".UserStatus" android:label="@string/status_header" />
-        <activity android:name=".ForgotPassword" android:label="@string/title_forgot_password" />
-        <activity android:name=".LoginFailed" android:label="@string/title_login_failed" />
-        <activity android:name=".BigImageViewActivity" android:label="Image" />
-        <activity android:name=".Page" android:label="Create New Page" />
-        <activity android:name=".Story" android:label="Create New Story" />
+        <activity
+            android:name=".Signup"
+            android:label="@string/title_signup_page" />
+        <activity
+            android:name=".FinishSignup"
+            android:label="@string/title_finish_signup" />
+        <activity
+            android:name=".PageDetail"
+            android:label="@string/title_page_detail" />
+        <activity
+            android:name=".ChatView"
+            android:label="@string/chat_page_detail" />
+        <activity
+            android:name=".BroadCast"
+            android:label="@string/broadcast_header" />
+        <activity
+            android:name=".Group"
+            android:label="@string/group_header" />
+        <activity
+            android:name=".UserStatus"
+            android:label="@string/status_header" />
+        <activity
+            android:name=".ForgotPassword"
+            android:label="@string/title_forgot_password" />
+        <activity
+            android:name=".LoginFailed"
+            android:label="@string/title_login_failed" />
+        <activity
+            android:name=".BigImageViewActivity"
+            android:label="Image" />
+        <activity
+            android:name=".Page"
+            android:label="Create New Page" />
+     <!--   <activity
+            android:name=".Story"
+            android:label="Create New Story" />-->
 
         <activity
             android:name=".RegisterActivity"
@@ -97,14 +130,39 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
 
+
+<!--
         <activity
             android:name=".MainActivity"
-            android:theme="@style/AppTheme"
+            android:label="@string/chat_page_detail" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        -->
+        <activity
+            android:name=".MainActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".PageDetails"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:parentActivityName=".PageDetails"
+            android:theme="@style/AppTheme" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".PageDetails" />
         </activity>
 
         <receiver
@@ -114,12 +172,37 @@
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
                 <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
 
-                <category android:name="com.rube.tt.keapp" />
+                <category android:name="in.co.madhur.chatbubblesdemo" />
             </intent-filter>
         </receiver>
 
         <service android:name=".GCMNotificationIntentService" />
+        <!--
+            <service android:name=".OfflineMessagesSender"
+            android:exported="false"/>
+        -->
 
+        <receiver
+            android:name=".BootUpReceiver"
+            android:enabled="true"
+            android:permission="android.permission.RECEIVE_BOOT_COMPLETED" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".OfflineMessagesSender"
+            android:enabled="true"
+            android:exported="true" >
+        </service>
+        <service
+            android:name=".offflinemessanger"
+            android:enabled="true"
+            android:exported="true" >
+        </service>
     </application>
 
 </manifest>
